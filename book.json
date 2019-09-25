@@ -1,0 +1,37 @@
+{
+  "author": "蔡毅",
+  "description": "只要你想做的事，全世界都会给你让路。",
+  "extension": null,
+  "generator": "site",
+  "isbn": "9787121324758",
+  "links": {
+	"sharing": {
+	  "all": null,
+	  "facebook": null,
+	  "google": null,
+	  "twitter": null,
+	  "weibo": null
+	},
+	"sidebar": {
+	  "cy的个人博客": "https://blog.csdn.net/chdyiboke/",
+	  "cy的github": "https://github.com/chdyiboke/"
+	}
+  },
+  "output": null,
+  "pdf": {
+	"fontSize": 12,
+	"footerTemplate": null,
+	"headerTemplate": null,
+	"margin": {
+	  "bottom": 36,
+	  "left": 62,
+	  "right": 62,
+	  "top": 36
+	},
+	"pageNumbers": false,
+	"paperSize": "a4"
+  },
+  "plugins": [],
+  "title": "cy",
+  "variables": {}
+}
