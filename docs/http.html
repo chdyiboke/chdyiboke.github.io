@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>【learning】3.1.2 前端工程化 · cy</title>
+        <title>1.1.4 http · cy</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="TypeScript.html" />
+    <link rel="next" href="ES6.html" />
     
     
-    <link rel="prev" href="npm.html" />
+    <link rel="prev" href="CSS3.html" />
     
 
     </head>
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="http.html">
+        <li class="chapter active" data-level="1.6" data-path="http.html">
             
                 <a href="http.html">
             
@@ -259,7 +259,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13" data-path="webpack.html">
+        <li class="chapter " data-level="1.13" data-path="webpack.html">
             
                 <a href="webpack.html">
             
@@ -298,9 +298,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16" data-path="../project/grade.html">
+        <li class="chapter " data-level="1.16" data-path="../project/grade.md">
             
-                <a href="../project/grade.html">
+                <span>
             
                     
                     5.0.0 grade
@@ -311,9 +311,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17" data-path="../project/keeper.html">
+        <li class="chapter " data-level="1.17" data-path="../project/keeper.md">
             
-                <a href="../project/keeper.html">
+                <span>
             
                     
                     5.0.1 项目
@@ -324,9 +324,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="../project/sankuai.pr.html">
+        <li class="chapter " data-level="1.18" data-path="../project/sankuai.pr.md">
             
-                <a href="../project/sankuai.pr.html">
+                <span>
             
                     
                     5.0.2 优秀的pr【常看常学】
@@ -337,9 +337,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="../project/share.html">
+        <li class="chapter " data-level="1.19" data-path="../project/share.md">
             
-                <a href="../project/share.html">
+                <span>
             
                     
                     5.0.3 技术分享
@@ -350,9 +350,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20" data-path="../love/book.html">
+        <li class="chapter " data-level="1.20" data-path="../love/book.md">
             
-                <a href="../love/book.html">
+                <span>
             
                     
                     6.0.1 开卷有益
@@ -393,7 +393,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >【learning】3.1.2 前端工程化</a>
+        <a href=".." >1.1.4 http</a>
     </h1>
 </div>
 
@@ -408,26 +408,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5316;">&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5316;</h1>
-<p><a href="https://webpack.docschina.org" target="_blank">https://webpack.docschina.org</a></p>
-<h2 id="&#x4ECE;0&#x5F00;&#x59CB;--&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x642D;&#x5EFA;">&#x4ECE;0&#x5F00;&#x59CB;--&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x642D;&#x5EFA;</h2>
-<h2 id="&#x6027;&#x80FD;&#x4F18;&#x5316;--&#x5404;&#x4E2A;&#x65B9;&#x9762;&#xFF0C;&#x8BB0;&#x5F55;&#x65F6;&#x95F4;">&#x6027;&#x80FD;&#x4F18;&#x5316;--&#x5404;&#x4E2A;&#x65B9;&#x9762;&#xFF0C;&#x8BB0;&#x5F55;&#x65F6;&#x95F4;</h2>
-<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
-<p>  <a href="http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html" target="_blank">JavaScript Source Map &#x8BE6;&#x89E3;</a>:</p>
-<pre><code>  &lt;!--  &#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5B9A;&#x4F4D;bug: &#x51FA;&#x9519;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9664;&#x9519;&#x5DE5;&#x5177;&#x5C06;&#x76F4;&#x63A5;&#x663E;&#x793A;&#x539F;&#x59CB;&#x4EE3;&#x7801;  --&gt;
-  devtool: &apos;source-map&apos;,  // &#x6700;&#x9AD8;&#x8D28;&#x91CF;(&#x5B8C;&#x6574;)&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x4F7F;&#x5176;&#x5BF9;&#x751F;&#x4EA7;&#x6709;&#x4EF7;&#x503C;&#x3002;but,&#x6162;
-</code></pre><pre><code>// &#x5B89;&#x88C5;  http://npm.taobao.org/
-cnpm install [name]
-
-webpack
-// &#x76EE;&#x6807; &#x9ED8;&#x8BA4;&#x7F16;&#x8BD1;&#x76EE;&#x6807;&#x6587;&#x4EF6;  /src/index.js  
-
-webpack --config webpack.config.dev.js  //&#x6307;&#x5B9A;&#x6587;&#x4EF6;
-
-webpack --progress --colors --watch   // &#x53C2;&#x6570;
-
-&#x914D;&#x7F6E;&#x6587;&#x6863;&#xFF1A;https://webpack.js.org/configuration/entry-context/
+                                <h1 id="http">http</h1>
+<pre><code class="lang-bash">    <span class="hljs-string">&quot;x-real-ip&quot;</span>: <span class="hljs-string">&quot;172.19.167.228&quot;</span>,
+    <span class="hljs-string">&quot;x-forwarded-for&quot;</span>: <span class="hljs-string">&quot;172.19.167.228&quot;</span>,
+    <span class="hljs-string">&quot;x-forwarded-proto&quot;</span>: <span class="hljs-string">&quot;http&quot;</span>,
+// &#x534F;&#x8BAE; http
+this.ctx.headers[<span class="hljs-string">&apos;x-forwarded-proto&apos;</span>];
+// &#x5730;&#x5740; IP
+this.ctx.headers[<span class="hljs-string">&apos;x-real-ip&apos;</span>];
 </code></pre>
+
                                 
                                 </section>
                             
@@ -454,12 +444,12 @@ webpack --progress --colors --watch   // &#x53C2;&#x6570;
 
             
                 
-                <a href="npm.html" class="navigation navigation-prev " aria-label="Previous page: 3.1.1 npm">
+                <a href="CSS3.html" class="navigation navigation-prev " aria-label="Previous page: 1.1.3 CSS3">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="TypeScript.html" class="navigation navigation-next " aria-label="Next page: 3.2.1 TypeScript">
+                <a href="ES6.html" class="navigation navigation-next " aria-label="Next page: 1.2.1 ECMAScript 6【完】">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -470,7 +460,7 @@ webpack --progress --colors --watch   // &#x53C2;&#x6570;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"【learning】3.1.2 前端工程化","level":"1.13","depth":1,"next":{"title":"3.2.1 TypeScript","level":"1.14","depth":1,"path":"docs/TypeScript.md","ref":"docs/TypeScript.md","articles":[]},"previous":{"title":"3.1.1 npm","level":"1.12","depth":1,"path":"docs/npm.md","ref":"docs/npm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"蔡毅","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"9787121324758","variables":{},"title":"cy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"cy的个人博客":"https://blog.csdn.net/chdyiboke/","cy的github":"https://github.com/chdyiboke/"}},"gitbook":"*","description":"只要你想做的事，全世界都会给你让路。","extension":null},"file":{"path":"docs/webpack.md","mtime":"2019-10-24T02:21:13.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-23T11:47:07.788Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.1.4 http","level":"1.6","depth":1,"next":{"title":"1.2.1 ECMAScript 6【完】","level":"1.7","depth":1,"path":"docs/ES6.md","ref":"docs/ES6.md","articles":[]},"previous":{"title":"1.1.3 CSS3","level":"1.5","depth":1,"path":"docs/CSS3.md","ref":"docs/CSS3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"蔡毅","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"9787121324758","variables":{},"title":"cy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"cy的个人博客":"https://blog.csdn.net/chdyiboke/","cy的github":"https://github.com/chdyiboke/"}},"gitbook":"*","description":"只要你想做的事，全世界都会给你让路。","extension":null},"file":{"path":"docs/http.md","mtime":"2019-10-09T12:18:25.136Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-16T02:57:56.444Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -478,10 +468,6 @@ webpack --progress --colors --watch   // &#x53C2;&#x6570;
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

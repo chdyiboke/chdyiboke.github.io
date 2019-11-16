@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2.1.1 Antd 应用 · cy</title>
+        <title>2.2.2 md语法 · cy</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="macshell.html" />
+    <link rel="next" href="npm.html" />
     
     
-    <link rel="prev" href="ES6.html" />
+    <link rel="prev" href="vscode.html" />
     
 
     </head>
@@ -194,7 +194,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="antd.html">
+        <li class="chapter " data-level="1.8" data-path="antd.html">
             
                 <a href="antd.html">
             
@@ -233,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="md.html">
+        <li class="chapter active" data-level="1.11" data-path="md.html">
             
                 <a href="md.html">
             
@@ -298,9 +298,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16" data-path="../project/grade.html">
+        <li class="chapter " data-level="1.16" data-path="../project/grade.md">
             
-                <a href="../project/grade.html">
+                <span>
             
                     
                     5.0.0 grade
@@ -311,9 +311,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17" data-path="../project/keeper.html">
+        <li class="chapter " data-level="1.17" data-path="../project/keeper.md">
             
-                <a href="../project/keeper.html">
+                <span>
             
                     
                     5.0.1 项目
@@ -324,9 +324,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="../project/sankuai.pr.html">
+        <li class="chapter " data-level="1.18" data-path="../project/sankuai.pr.md">
             
-                <a href="../project/sankuai.pr.html">
+                <span>
             
                     
                     5.0.2 优秀的pr【常看常学】
@@ -337,9 +337,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="../project/share.html">
+        <li class="chapter " data-level="1.19" data-path="../project/share.md">
             
-                <a href="../project/share.html">
+                <span>
             
                     
                     5.0.3 技术分享
@@ -350,9 +350,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20" data-path="../love/book.html">
+        <li class="chapter " data-level="1.20" data-path="../love/book.md">
             
-                <a href="../love/book.html">
+                <span>
             
                     
                     6.0.1 开卷有益
@@ -393,7 +393,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2.1.1 Antd 应用</a>
+        <a href=".." >2.2.2 md语法</a>
     </h1>
 </div>
 
@@ -408,38 +408,76 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="ant-design">ant design</h1>
-<h2 id="&#x5982;&#x4F55;&#x7ED9;-modal-&#x4E4B;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;&#x52A0;&#x4E0A;-drag-&#x4E8B;&#x4EF6;">&#x5982;&#x4F55;&#x7ED9; Modal &#x4E4B;&#x7C7B;&#x7684;&#x7EC4;&#x4EF6;&#x52A0;&#x4E0A; drag &#x4E8B;&#x4EF6;?</h2>
-<pre><code class="lang-code">// &#x6E90;&#x7801;
-// https://codesandbox.io/s/n3x23qxrm4
-// https://codesandbox.io/s/antd-drag-modal-r8fnr (&#x591A;&#x5C42;)
-// https://github.com/xiabingwu/dragm/blob/master/src/index.js
-
-    this.tdom.removeEventListener(&quot;mousedown&quot;, this.start);
-    document.removeEventListener(&quot;mouseup&quot;, this.docMouseUp);
-    document.removeEventListener(&quot;mousemove&quot;, this.docMove);
-
-  start = event =&gt; {
-    if (event.button != 0) {
-      //&#x53EA;&#x5141;&#x8BB8;&#x5DE6;&#x952E;&#xFF0C;&#x53F3;&#x952E;&#x95EE;&#x9898;&#x5728;&#x4E8E;&#x4E0D;&#x9009;&#x62E9;conextmenu&#x5C31;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;mouseup&#x4E8B;&#x4EF6;
-      return;
-    }
-    document.addEventListener(&quot;mousemove&quot;, this.docMove);
-    this.position.startX = event.pageX - this.position.dx;
-    this.position.startY = event.pageY - this.position.dy;
-  };
-  docMove = event =&gt; {
-    const tx = event.pageX - this.position.startX;
-    const ty = event.pageY - this.position.startY;
-    const transformStr = `translate(${tx}px,${ty}px)`;
-    this.props.updateTransform(transformStr, tx, ty, this.tdom);
-    this.position.dx = tx;
-    this.position.dy = ty;
-  };
-  docMouseUp = event =&gt; {
-    document.removeEventListener(&quot;mousemove&quot;, this.docMove);
-  };
+                                <h1 id="md">md</h1>
+<p>&#x533A;&#x5757;</p>
+<ul>
+<li><p>&#x533A;&#x5757;</p>
+<blockquote>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x533A;&#x5757;</p>
+</blockquote>
+</li>
+<li><p>&#x533A;&#x5757;&#x5206;&#x7EA7;</p>
+<blockquote>
+<p>&#x4E00;&#x7EA7;&#x533A;&#x5757;</p>
+<blockquote>
+<p>&#x4E8C;&#x7EA7;&#x533A;&#x5757;</p>
+<blockquote>
+<p>&#x4E09;&#x7EA7;&#x533A;&#x5757;</p>
+<blockquote>
+<p>&#x56DB;&#x7EA7;&#x533A;&#x5757;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>&#x534E;&#x4E3D;&#x7684;&#x5206;&#x5272;&#x7EBF;-&#x5206;&#x5272;&#x7EBF;&#x53EF;&#x4EE5;&#x7531;* - _&#xFF08;&#x661F;&#x53F7;&#xFF0C;&#x51CF;&#x53F7;&#xFF0C;&#x5E95;&#x7EBF;&#xFF09;&#x8FD9;3&#x4E2A;&#x7B26;&#x53F7;&#x7684;&#x81F3;&#x5C11;3&#x4E2A;&#x7B26;&#x53F7;&#x8868;&#x793A;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x94FE;&#x63A5;</li>
+</ul>
+<p><a href="http://example.com/" target="_blank">example</a>  </p>
+<ul>
+<li><p>&#x56FE;&#x7247;<br><img src="../img/team.jpg" alt="&#x8FD9;&#x662F;&#x56FE;&#x7247;"></p>
+</li>
+<li><p>&#x4EE3;&#x7801;&#x5757; -&#x53CD;&#x5F15;&#x53F7;</p>
+</li>
+</ul>
+<pre><code class="lang-&#x53EF;&#x4EE5;&#x5199;&#x6CE8;&#x91CA;">var words = &apos;this is code word&apos;;
 </code></pre>
+<p>&#x53D8;&#x91CF;<code>i</code>&#x662F;<code>var</code>&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x7684;</p>
+<ul>
+<li>&#x5F3A;&#x8C03; </li>
+</ul>
+<p><em>&#x5B57;&#x4F53;&#x503E;&#x659C;</em>
+<strong>&#x5F3A;&#x8C03;</strong></p>
+<ul>
+<li><p>&#x8F6C;&#x4E49; &#xFF1A;&#x548C;js&#x4E00;&#x6837; &#x4E0D;&#x4ECB;&#x7ECD;</p>
+</li>
+<li><p>&#x5220;&#x9664;&#x7EBF;</p>
+</li>
+</ul>
+<p><del>&#x5220;&#x9664;&#x9519;&#x8BEF;</del></p>
+<h1 id="&#x4E00;&#x7EA7;">&#x4E00;&#x7EA7;</h1>
+<h2 id="&#x4E8C;&#x7EA7;">&#x4E8C;&#x7EA7;</h2>
+<h3 id="&#x4E09;&#x7EA7;">&#x4E09;&#x7EA7;</h3>
+<h1 id="&#x4E00;&#x7EA7;">&#x4E00;&#x7EA7;</h1>
+<h2 id="&#x4E8C;&#x7EA7;">&#x4E8C;&#x7EA7;</h2>
+<h3 id="&#x4E09;&#x7EA7;">&#x4E09;&#x7EA7;</h3>
+<p>&#x5217;&#x8868;</p>
+<ul>
+<li>1111</li>
+<li>2222</li>
+<li>3333</li>
+<li>1&#x3001;1111</li>
+<li>2&#x3001;2222</li>
+<li>3&#x3001;3333</li>
+</ul>
+<ul>
+<li><em>&#x53C2;&#x8003;</em>  <a href="https://www.cnblogs.com/liugang-vip/p/6337580.html" target="_blank">https://www.cnblogs.com/liugang-vip/p/6337580.html</a></li>
+</ul>
 
                                 
                                 </section>
@@ -467,12 +505,12 @@
 
             
                 
-                <a href="ES6.html" class="navigation navigation-prev " aria-label="Previous page: 1.2.1 ECMAScript 6【完】">
+                <a href="vscode.html" class="navigation navigation-prev " aria-label="Previous page: 2.2.2 vs code使用">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="macshell.html" class="navigation navigation-next " aria-label="Next page: 2.2.1 Mac 终端命令">
+                <a href="npm.html" class="navigation navigation-next " aria-label="Next page: 3.1.1 npm">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -483,7 +521,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.1.1 Antd 应用","level":"1.8","depth":1,"next":{"title":"2.2.1 Mac 终端命令","level":"1.9","depth":1,"path":"docs/macshell.md","ref":"docs/macshell.md","articles":[]},"previous":{"title":"1.2.1 ECMAScript 6【完】","level":"1.7","depth":1,"path":"docs/ES6.md","ref":"docs/ES6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"蔡毅","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"9787121324758","variables":{},"title":"cy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"cy的个人博客":"https://blog.csdn.net/chdyiboke/","cy的github":"https://github.com/chdyiboke/"}},"gitbook":"*","description":"只要你想做的事，全世界都会给你让路。","extension":null},"file":{"path":"docs/antd.md","mtime":"2019-09-29T12:03:33.019Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-23T11:47:07.788Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.2.2 md语法","level":"1.11","depth":1,"next":{"title":"3.1.1 npm","level":"1.12","depth":1,"path":"docs/npm.md","ref":"docs/npm.md","articles":[]},"previous":{"title":"2.2.2 vs code使用","level":"1.10","depth":1,"path":"docs/vscode.md","ref":"docs/vscode.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"蔡毅","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"9787121324758","variables":{},"title":"cy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"cy的个人博客":"https://blog.csdn.net/chdyiboke/","cy的github":"https://github.com/chdyiboke/"}},"gitbook":"*","description":"只要你想做的事，全世界都会给你让路。","extension":null},"file":{"path":"docs/md.md","mtime":"2019-09-28T08:03:58.208Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-16T02:57:56.444Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -491,10 +529,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
