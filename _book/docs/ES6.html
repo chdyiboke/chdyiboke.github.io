@@ -1,0 +1,1263 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.2.1 ECMAScript 6【完】 · cy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="蔡毅">
+        <meta name="identifier" content="9787121324758" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="antd.html" />
+    
+    
+    <link rel="prev" href="http.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://blog.csdn.net/chdyiboke/" target="_blank" class="custom-link">cy的个人博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/chdyiboke/" target="_blank" class="custom-link">cy的github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0. 整体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="problem.html">
+            
+                <a href="problem.html">
+            
+                    
+                    0.0.1 好奇心&少年感
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="JavaScript.html">
+            
+                <a href="JavaScript.html">
+            
+                    
+                    1.1.1 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="HTML5.html">
+            
+                <a href="HTML5.html">
+            
+                    
+                    1.1.2 HTML5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="CSS3.html">
+            
+                <a href="CSS3.html">
+            
+                    
+                    1.1.3 CSS3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="http.html">
+            
+                <a href="http.html">
+            
+                    
+                    1.1.4 http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="ES6.html">
+            
+                <a href="ES6.html">
+            
+                    
+                    1.2.1 ECMAScript 6【完】
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="antd.html">
+            
+                <a href="antd.html">
+            
+                    
+                    2.1.1 Antd 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="macshell.html">
+            
+                <a href="macshell.html">
+            
+                    
+                    2.2.1 Mac 终端命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="vscode.html">
+            
+                <a href="vscode.html">
+            
+                    
+                    2.2.2 vs code使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="md.html">
+            
+                <a href="md.html">
+            
+                    
+                    2.2.2 md语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="npm.html">
+            
+                <a href="npm.html">
+            
+                    
+                    3.1.1 npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="webpack.html">
+            
+                <a href="webpack.html">
+            
+                    
+                    【learning】3.1.2 前端工程化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="TypeScript.html">
+            
+                <a href="TypeScript.html">
+            
+                    
+                    3.2.1 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="dataStructures.html">
+            
+                <a href="dataStructures.html">
+            
+                    
+                    4.4数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../project/grade.html">
+            
+                <a href="../project/grade.html">
+            
+                    
+                    5.0.0 grade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../project/keeper.html">
+            
+                <a href="../project/keeper.html">
+            
+                    
+                    5.0.1 项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../project/sankuai.pr.html">
+            
+                <a href="../project/sankuai.pr.html">
+            
+                    
+                    5.0.2 优秀的pr【常看常学】
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../project/share.html">
+            
+                <a href="../project/share.html">
+            
+                    
+                    5.0.3 技术分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../love/book.html">
+            
+                <a href="../love/book.html">
+            
+                    
+                    6.0.1 开卷有益
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.2.1 ECMAScript 6【完】</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="2019-10-1&#x770B;&#x5B8C;&#x300B;&#x300B;&#x300B;css3">2019-10-1&#x770B;&#x5B8C;&#x300B;&#x300B;&#x300B;CSS3</h1>
+<p>let &#x548C; const &#x547D;&#x4EE4;</p>
+<h2 id="let-&#x547D;&#x4EE4;">let &#x547D;&#x4EE4;</h2>
+<pre><code>[let&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x4E0D;&#x5728;window&#x91CC;](https://stackoverflow.com/questions/55030498/why-dont-const-and-let-statements-get-defined-on-the-window-object) 
+const constVar = &apos;some string&apos;;
+let letVar = &apos;some string&apos;;
+var varVar = &apos;some string&apos;;
+
+(function() {
+  console.log(window.constVar); // prints undefined
+  console.log(window.letVar); // prints undefined
+  console.log(window.varVar); // prints &apos;some string&apos;
+})();
+</code></pre><p><code>for</code>&#x5FAA;&#x73AF;&#x7684;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x5C31;&#x5F88;&#x5408;&#x9002;&#x4F7F;&#x7528;<code>let</code>&#x547D;&#x4EE4;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-built_in">console</span>.log(i);
+<span class="hljs-comment">// ReferenceError: i is not defined</span>
+</code></pre>
+<p>&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#x7684;&#x672C;&#x8D28;&#x5C31;&#x662F;&#xFF0C;&#x53EA;&#x8981;&#x4E00;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x6240;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;&#x5C31;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#xFF0C;&#x53EA;&#x6709;&#x7B49;&#x5230;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x90A3;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x51FA;&#x73B0;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x548C;&#x4F7F;&#x7528;&#x8BE5;&#x53D8;&#x91CF;&#x3002;</p>
+<h3 id="es6-&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x516D;&#x79CD;&#x65B9;&#x6CD5;">ES6 &#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x516D;&#x79CD;&#x65B9;&#x6CD5;</h3>
+<p>ES5 &#x53EA;&#x6709;&#x4E24;&#x79CD;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<code>var</code>&#x547D;&#x4EE4;&#x548C;<code>function</code>&#x547D;&#x4EE4;&#x3002;ES6 &#x9664;&#x4E86;&#x6DFB;&#x52A0;<code>let</code>&#x548C;<code>const</code>&#x547D;&#x4EE4;&#xFF0C;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x8FD8;&#x4F1A;&#x63D0;&#x5230;&#xFF0C;&#x53E6;&#x5916;&#x4E24;&#x79CD;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<code>import</code>&#x547D;&#x4EE4;&#x548C;<code>class</code>&#x547D;&#x4EE4;&#x3002;&#x6240;&#x4EE5;&#xFF0C;ES6 &#x4E00;&#x5171;&#x6709; 6 &#x79CD;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;">&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</h2>
+<p>&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x6307;&#x7684;&#x662F;<code>window</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5728; Node &#x6307;&#x7684;&#x662F;<code>global</code>&#x5BF9;&#x8C61;&#x3002;ES5 &#x4E4B;&#x4E2D;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x4E0E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">window</span>.a = <span class="hljs-number">1</span>;
+a <span class="hljs-comment">// 1</span>
+
+a = <span class="hljs-number">2</span>;
+<span class="hljs-built_in">window</span>.a <span class="hljs-comment">// 2</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x4E0E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x8D4B;&#x503C;&#xFF0C;&#x662F;&#x540C;&#x4E00;&#x4EF6;&#x4E8B;&#x3002;</p>
+<p>&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x4E0E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x6302;&#x94A9;&#xFF0C;&#x88AB;&#x8BA4;&#x4E3A;&#x662F; JavaScript &#x8BED;&#x8A00;&#x6700;&#x5927;&#x7684;&#x8BBE;&#x8BA1;&#x8D25;&#x7B14;&#x4E4B;&#x4E00;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BBE;&#x8BA1;&#x5E26;&#x6765;&#x4E86;&#x51E0;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x9996;&#x5148;&#x662F;&#x6CA1;&#x6CD5;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x62A5;&#x51FA;&#x53D8;&#x91CF;&#x672A;&#x58F0;&#x660E;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x53EA;&#x6709;&#x8FD0;&#x884C;&#x65F6;&#x624D;&#x80FD;&#x77E5;&#x9053;&#xFF08;&#x56E0;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x662F;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x521B;&#x9020;&#x7684;&#xFF0C;&#x800C;&#x5C5E;&#x6027;&#x7684;&#x521B;&#x9020;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF09;&#xFF1B;&#x5176;&#x6B21;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x5F88;&#x5BB9;&#x6613;&#x4E0D;&#x77E5;&#x4E0D;&#x89C9;&#x5730;&#x5C31;&#x521B;&#x5EFA;&#x4E86;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF08;&#x6BD4;&#x5982;&#x6253;&#x5B57;&#x51FA;&#x9519;&#xFF09;&#xFF1B;&#x6700;&#x540E;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x662F;&#x5230;&#x5904;&#x53EF;&#x4EE5;&#x8BFB;&#x5199;&#x7684;&#xFF0C;&#x8FD9;&#x975E;&#x5E38;&#x4E0D;&#x5229;&#x4E8E;&#x6A21;&#x5757;&#x5316;&#x7F16;&#x7A0B;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;<code>window</code>&#x5BF9;&#x8C61;&#x6709;&#x5B9E;&#x4F53;&#x542B;&#x4E49;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x7A97;&#x53E3;&#x5BF9;&#x8C61;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x5B9E;&#x4F53;&#x542B;&#x4E49;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x662F;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x3002;</p>
+<p>ES6 &#x4E3A;&#x4E86;&#x6539;&#x53D8;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x4E00;&#x65B9;&#x9762;&#x89C4;&#x5B9A;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x517C;&#x5BB9;&#x6027;&#xFF0C;<code>var</code>&#x547D;&#x4EE4;&#x548C;<code>function</code>&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4F9D;&#x65E7;&#x662F;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF1B;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#x89C4;&#x5B9A;&#xFF0C;<code>let</code>&#x547D;&#x4EE4;&#x3001;<code>const</code>&#x547D;&#x4EE4;&#x3001;<code>class</code>&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x5C5E;&#x4E8E;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4ECE; ES6 &#x5F00;&#x59CB;&#xFF0C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5C06;&#x9010;&#x6B65;&#x4E0E;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x8131;&#x94A9;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-comment">// &#x5982;&#x679C;&#x5728; Node &#x7684; REPL &#x73AF;&#x5883;&#xFF0C;&#x53EF;&#x4EE5;&#x5199;&#x6210; global.a</span>
+<span class="hljs-comment">// &#x6216;&#x8005;&#x91C7;&#x7528;&#x901A;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x5199;&#x6210; this.a</span>
+<span class="hljs-built_in">window</span>.a <span class="hljs-comment">// 1</span>
+
+<span class="hljs-keyword">let</span> b = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">window</span>.b <span class="hljs-comment">// undefined</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5168;&#x5C40;&#x53D8;&#x91CF;<code>a</code>&#x7531;<code>var</code>&#x547D;&#x4EE4;&#x58F0;&#x660E;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x662F;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF1B;&#x5168;&#x5C40;&#x53D8;&#x91CF;<code>b</code>&#x7531;<code>let</code>&#x547D;&#x4EE4;&#x58F0;&#x660E;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4E0D;&#x662F;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD4;&#x56DE;<code>undefined</code>&#x3002;</p>
+<h2 id="globalthis-&#x5BF9;&#x8C61;">globalThis &#x5BF9;&#x8C61;</h2>
+<p>JavaScript &#x8BED;&#x8A00;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x5168;&#x5C40;&#x73AF;&#x5883;&#xFF08;&#x5373;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x5728;&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#x4E2D;&#x8FD0;&#x884C;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x5728;&#x5404;&#x79CD;&#x5B9E;&#x73B0;&#x91CC;&#x9762;&#x662F;&#x4E0D;&#x7EDF;&#x4E00;&#x7684;&#x3002;</p>
+<ul>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x9762;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x662F;<code>window</code>&#xFF0C;&#x4F46; Node &#x548C; Web Worker &#x6CA1;&#x6709;<code>window</code>&#x3002;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x548C; Web Worker &#x91CC;&#x9762;&#xFF0C;<code>self</code>&#x4E5F;&#x6307;&#x5411;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x662F; Node &#x6CA1;&#x6709;<code>self</code>&#x3002;</li>
+<li>Node &#x91CC;&#x9762;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x662F;<code>global</code>&#xFF0C;&#x4F46;&#x5176;&#x4ED6;&#x73AF;&#x5883;&#x90FD;&#x4E0D;&#x652F;&#x6301;&#x3002;</li>
+</ul>
+<p>&#x540C;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x5728;&#x5404;&#x79CD;&#x73AF;&#x5883;&#xFF0C;&#x90FD;&#x80FD;&#x53D6;&#x5230;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x73B0;&#x5728;&#x4E00;&#x822C;&#x662F;&#x4F7F;&#x7528;<code>this</code>&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x5C40;&#x9650;&#x6027;&#x3002;</p>
+<ul>
+<li>&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;<code>this</code>&#x4F1A;&#x8FD4;&#x56DE;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x3002;&#x4F46;&#x662F;&#xFF0C;Node &#x6A21;&#x5757;&#x548C; ES6 &#x6A21;&#x5757;&#x4E2D;&#xFF0C;<code>this</code>&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x3002;</li>
+<li>&#x51FD;&#x6570;&#x91CC;&#x9762;&#x7684;<code>this</code>&#xFF0C;&#x5982;&#x679C;&#x51FD;&#x6570;&#x4E0D;&#x662F;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x8FD0;&#x884C;&#xFF0C;&#x800C;&#x662F;&#x5355;&#x7EAF;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x8FD0;&#x884C;&#xFF0C;<code>this</code>&#x4F1A;&#x6307;&#x5411;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x8FD9;&#x65F6;<code>this</code>&#x4F1A;&#x8FD4;&#x56DE;<code>undefined</code>&#x3002;</li>
+<li>&#x4E0D;&#x7BA1;&#x662F;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD8;&#x662F;&#x666E;&#x901A;&#x6A21;&#x5F0F;&#xFF0C;<code>new Function(&apos;return this&apos;)()</code>&#xFF0C;&#x603B;&#x662F;&#x4F1A;&#x8FD4;&#x56DE;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6D4F;&#x89C8;&#x5668;&#x7528;&#x4E86; CSP&#xFF08;Content Security Policy&#xFF0C;&#x5185;&#x5BB9;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;<code>eval</code>&#x3001;<code>new Function</code>&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x5F88;&#x96BE;&#x627E;&#x5230;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6240;&#x6709;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90FD;&#x53D6;&#x5230;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E24;&#x79CD;&#x52C9;&#x5F3A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x65B9;&#x6CD5;&#x4E00;</span>
+(<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> !== <span class="hljs-string">&apos;undefined&apos;</span>
+   ? <span class="hljs-built_in">window</span>
+   : (<span class="hljs-keyword">typeof</span> process === <span class="hljs-string">&apos;object&apos;</span> &amp;&amp;
+      <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">require</span> === <span class="hljs-string">&apos;function&apos;</span> &amp;&amp;
+      <span class="hljs-keyword">typeof</span> global === <span class="hljs-string">&apos;object&apos;</span>)
+     ? global
+     : <span class="hljs-keyword">this</span>);
+
+<span class="hljs-comment">// &#x65B9;&#x6CD5;&#x4E8C;</span>
+<span class="hljs-keyword">var</span> getGlobal = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> self !== <span class="hljs-string">&apos;undefined&apos;</span>) { <span class="hljs-keyword">return</span> self; }
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> !== <span class="hljs-string">&apos;undefined&apos;</span>) { <span class="hljs-keyword">return</span> <span class="hljs-built_in">window</span>; }
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> global !== <span class="hljs-string">&apos;undefined&apos;</span>) { <span class="hljs-keyword">return</span> global; }
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;unable to locate global object&apos;</span>);
+};
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6709;&#x4E00;&#x4E2A;<a href="https://github.com/tc39/proposal-global" target="_blank">&#x63D0;&#x6848;</a>&#xFF0C;&#x5728;&#x8BED;&#x8A00;&#x6807;&#x51C6;&#x7684;&#x5C42;&#x9762;&#xFF0C;&#x5F15;&#x5165;<code>globalThis</code>&#x4F5C;&#x4E3A;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4EFB;&#x4F55;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;<code>globalThis</code>&#x90FD;&#x662F;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x4ECE;&#x5B83;&#x62FF;&#x5230;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x6307;&#x5411;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E0B;&#x7684;<code>this</code>&#x3002;</p>
+<p>&#x57AB;&#x7247;&#x5E93;<a href="https://github.com/ungap/global-this" target="_blank"><code>global-this</code></a>&#x6A21;&#x62DF;&#x4E86;&#x8FD9;&#x4E2A;&#x63D0;&#x6848;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6240;&#x6709;&#x73AF;&#x5883;&#x62FF;&#x5230;<code>globalThis</code>&#x3002;</p>
+<p>&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x53D6;&#x4EE3;<code>apply</code>&#x65B9;&#x6CD5;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5E94;&#x7528;<code>Math.max</code>&#x65B9;&#x6CD5;&#xFF0C;&#x7B80;&#x5316;&#x6C42;&#x51FA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x6700;&#x5927;&#x5143;&#x7D20;&#x7684;&#x5199;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ES5 &#x7684;&#x5199;&#x6CD5;</span>
+<span class="hljs-built_in">Math</span>.max.apply(<span class="hljs-literal">null</span>, [<span class="hljs-number">14</span>, <span class="hljs-number">3</span>, <span class="hljs-number">77</span>])
+
+<span class="hljs-comment">// ES6 &#x7684;&#x5199;&#x6CD5;</span>
+<span class="hljs-built_in">Math</span>.max(...[<span class="hljs-number">14</span>, <span class="hljs-number">3</span>, <span class="hljs-number">77</span>])
+
+<span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E;</span>
+<span class="hljs-built_in">Math</span>.max(<span class="hljs-number">14</span>, <span class="hljs-number">3</span>, <span class="hljs-number">77</span>);
+</code></pre>
+<p><strong>&#xFF08;1&#xFF09;&#x590D;&#x5236;&#x6570;&#x7EC4;</strong>
+&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x63D0;&#x4F9B;&#x4E86;&#x590D;&#x5236;&#x6570;&#x7EC4;&#x7684;&#x7B80;&#x4FBF;&#x5199;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+<span class="hljs-comment">// &#x5199;&#x6CD5;&#x4E00;</span>
+<span class="hljs-keyword">const</span> a2 = [...a1];
+<span class="hljs-comment">// &#x5199;&#x6CD5;&#x4E8C;</span>
+<span class="hljs-keyword">const</span> [...a2] = a1;
+</code></pre>
+<p><strong>&#xFF08;2&#xFF09;&#x5408;&#x5E76;&#x6570;&#x7EC4;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>];
+<span class="hljs-keyword">const</span> arr2 = [<span class="hljs-string">&apos;c&apos;</span>];
+<span class="hljs-keyword">const</span> arr3 = [<span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>];
+
+<span class="hljs-comment">// ES5 &#x7684;&#x5408;&#x5E76;&#x6570;&#x7EC4;</span>
+arr1.concat(arr2, arr3);
+<span class="hljs-comment">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span>
+
+<span class="hljs-comment">// ES6 &#x7684;&#x5408;&#x5E76;&#x6570;&#x7EC4;</span>
+[...arr1, ...arr2, ...arr3]
+<span class="hljs-comment">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span>
+</code></pre>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x6D45;&#x62F7;&#x8D1D;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x3002;</p>
+<p><strong>&#xFF08;3&#xFF09;&#x4E0E;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7ED3;&#x5408;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> [first, ...rest] = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+first <span class="hljs-comment">// 1</span>
+rest  <span class="hljs-comment">// [2, 3, 4, 5]</span>
+</code></pre>
+<p>&#x6570;&#x7EC4;&#x5B9E;&#x4F8B;&#x7684;<code>find</code>&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x627E;&#x51FA;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x3002;&#x5B83;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x51FA;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;<code>true</code>&#x7684;&#x6210;&#x5458;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x8BE5;&#x6210;&#x5458;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;<code>undefined</code>&#x3002;</p>
+<pre><code class="lang-javascript">[<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">10</span>].find((n) =&gt; n &lt; <span class="hljs-number">0</span>)
+<span class="hljs-comment">// -5</span>
+</code></pre>
+<p>&#x6570;&#x7EC4;&#x5B9E;&#x4F8B;&#x7684;<code>findIndex</code>&#x65B9;&#x6CD5;&#x7684;&#x7528;&#x6CD5;&#x4E0E;<code>find</code>&#x65B9;&#x6CD5;&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#xFF0C;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x6240;&#x6709;&#x6210;&#x5458;&#x90FD;&#x4E0D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;<code>-1</code>&#x3002;</p>
+<pre><code class="lang-javascript">[<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>].findIndex(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, index, arr</span>) </span>{
+  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">9</span>;
+}) <span class="hljs-comment">// 2</span>
+</code></pre>
+<h2 id="&#x6570;&#x7EC4;&#x5B9E;&#x4F8B;&#x7684;-entries&#xFF0C;keys-&#x548C;-values">&#x6570;&#x7EC4;&#x5B9E;&#x4F8B;&#x7684; entries()&#xFF0C;keys() &#x548C; values()</h2>
+<p>ES6 &#x63D0;&#x4F9B;&#x4E09;&#x4E2A;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#x2014;&#x2014;<code>entries()</code>&#xFF0C;<code>keys()</code>&#x548C;<code>values()</code>&#x2014;&#x2014;&#x7528;&#x4E8E;&#x904D;&#x5386;&#x6570;&#x7EC4;&#x3002;&#x5B83;&#x4EEC;&#x90FD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x904D;&#x5386;&#x5668;&#x5BF9;&#x8C61;&#xFF08;&#x8BE6;&#x89C1;&#x300A;Iterator&#x300B;&#x4E00;&#x7AE0;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;<code>for...of</code>&#x5FAA;&#x73AF;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x662F;<code>keys()</code>&#x662F;&#x5BF9;&#x952E;&#x540D;&#x7684;&#x904D;&#x5386;&#x3001;<code>values()</code>&#x662F;&#x5BF9;&#x952E;&#x503C;&#x7684;&#x904D;&#x5386;&#xFF0C;<code>entries()</code>&#x662F;&#x5BF9;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x904D;&#x5386;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> index <span class="hljs-keyword">of</span> [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>].keys()) {
+  <span class="hljs-built_in">console</span>.log(index);
+}
+<span class="hljs-comment">// 0</span>
+<span class="hljs-comment">// 1</span>
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> elem <span class="hljs-keyword">of</span> [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>].values()) {
+  <span class="hljs-built_in">console</span>.log(elem);
+}
+<span class="hljs-comment">// &apos;a&apos;</span>
+<span class="hljs-comment">// &apos;b&apos;</span>
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> [index, elem] <span class="hljs-keyword">of</span> [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>].entries()) {
+  <span class="hljs-built_in">console</span>.log(index, elem);
+}
+<span class="hljs-comment">// 0 &quot;a&quot;</span>
+<span class="hljs-comment">// 1 &quot;b&quot;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;<code>for...of</code>&#x5FAA;&#x73AF;&#xFF0C;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x8C03;&#x7528;&#x904D;&#x5386;&#x5668;&#x5BF9;&#x8C61;&#x7684;<code>next</code>&#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> letter = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+<span class="hljs-keyword">let</span> entries = letter.entries();
+<span class="hljs-built_in">console</span>.log(entries.next().value); <span class="hljs-comment">// [0, &apos;a&apos;]</span>
+<span class="hljs-built_in">console</span>.log(entries.next().value); <span class="hljs-comment">// [1, &apos;b&apos;]</span>
+<span class="hljs-built_in">console</span>.log(entries.next().value); <span class="hljs-comment">// [2, &apos;c&apos;]</span>
+</code></pre>
+<p><code>indexOf</code>&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#x7F3A;&#x70B9;&#xFF0C;&#x4E00;&#x662F;&#x4E0D;&#x591F;&#x8BED;&#x4E49;&#x5316;&#xFF0C;&#x5B83;&#x7684;&#x542B;&#x4E49;&#x662F;&#x627E;&#x5230;&#x53C2;&#x6570;&#x503C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x51FA;&#x73B0;&#x4F4D;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x53BB;&#x6BD4;&#x8F83;&#x662F;&#x5426;&#x4E0D;&#x7B49;&#x4E8E;<code>-1</code>&#xFF0C;&#x8868;&#x8FBE;&#x8D77;&#x6765;&#x4E0D;&#x591F;&#x76F4;&#x89C2;&#x3002;&#x4E8C;&#x662F;&#xFF0C;&#x5B83;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x4E25;&#x683C;&#x76F8;&#x7B49;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;<code>===</code>&#xFF09;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF0C;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x5BF9;<code>NaN</code>&#x7684;&#x8BEF;&#x5224;&#x3002;</p>
+<pre><code class="lang-javascript">[<span class="hljs-literal">NaN</span>].includes(<span class="hljs-literal">NaN</span>)
+<span class="hljs-comment">// true</span>
+</code></pre>
+<ul>
+<li><code>filter()</code> &#x8FD4;&#x56DE;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x65B0;&#x6570;&#x7EC4;&#xFF08;&#x6CA1;&#x6709;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE; [])</li>
+<li><code>some()</code> &#x53EA;&#x8981;&#x6709;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x8FD4;&#x56DE; true &#xFF08;&#x5426;&#x5219; false)</li>
+<li><p><code>every()</code> &#x6240;&#x4EE5;&#x5143;&#x7D20;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x5219;&#x8FD4;&#x56DE; true &#xFF08;&#x5426;&#x5219; false)</p>
+</li>
+<li><p><code>forEach()</code>, <code>filter()</code>, <code>reduce()</code>, <code>every()</code> &#x548C;<code>some()</code>&#x90FD;&#x4F1A;&#x8DF3;&#x8FC7;&#x7A7A;&#x4F4D;&#x3002;</p>
+</li>
+<li><code>map()</code>&#x4F1A;&#x8DF3;&#x8FC7;&#x7A7A;&#x4F4D;&#xFF0C;&#x4F46;&#x4F1A;&#x4FDD;&#x7559;&#x8FD9;&#x4E2A;&#x503C;</li>
+<li><code>join()</code>&#x548C;<code>toString()</code>&#x4F1A;&#x5C06;&#x7A7A;&#x4F4D;&#x89C6;&#x4E3A;<code>undefined</code>&#xFF0C;&#x800C;<code>undefined</code>&#x548C;<code>null</code>&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x6210;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-comment">// forEach&#x65B9;&#x6CD5;</span>
+[,<span class="hljs-string">&apos;a&apos;</span>].forEach((x,i) =&gt; <span class="hljs-built_in">console</span>.log(i)); <span class="hljs-comment">// 1</span>
+
+<span class="hljs-comment">// filter&#x65B9;&#x6CD5;</span>
+[<span class="hljs-string">&apos;a&apos;</span>,,<span class="hljs-string">&apos;b&apos;</span>].filter(x =&gt; <span class="hljs-literal">true</span>) <span class="hljs-comment">// [&apos;a&apos;,&apos;b&apos;]</span>
+
+<span class="hljs-comment">// every&#x65B9;&#x6CD5;</span>
+[,<span class="hljs-string">&apos;a&apos;</span>].every(x =&gt; x===<span class="hljs-string">&apos;a&apos;</span>) <span class="hljs-comment">// true</span>
+
+<span class="hljs-comment">// reduce&#x65B9;&#x6CD5;</span>
+[<span class="hljs-number">1</span>,,<span class="hljs-number">2</span>].reduce((x,y) =&gt; x+y) <span class="hljs-comment">// 3</span>
+
+<span class="hljs-comment">// some&#x65B9;&#x6CD5;</span>
+[,<span class="hljs-string">&apos;a&apos;</span>].some(x =&gt; x !== <span class="hljs-string">&apos;a&apos;</span>) <span class="hljs-comment">// false</span>
+
+<span class="hljs-comment">// map&#x65B9;&#x6CD5;</span>
+[,<span class="hljs-string">&apos;a&apos;</span>].map(x =&gt; <span class="hljs-number">1</span>) <span class="hljs-comment">// [,1]</span>
+
+<span class="hljs-comment">// join&#x65B9;&#x6CD5;</span>
+[,<span class="hljs-string">&apos;a&apos;</span>,<span class="hljs-literal">undefined</span>,<span class="hljs-literal">null</span>].join(<span class="hljs-string">&apos;#&apos;</span>) <span class="hljs-comment">// &quot;#a##&quot;</span>
+
+<span class="hljs-comment">// toString&#x65B9;&#x6CD5;</span>
+[,<span class="hljs-string">&apos;a&apos;</span>,<span class="hljs-literal">undefined</span>,<span class="hljs-literal">null</span>].toString() <span class="hljs-comment">// &quot;,a,,&quot;</span>
+</code></pre>
+<pre><code>/*
+async&#x51FD;&#x6570;&#x5BF9; Generator &#x51FD;&#x6570;&#x7684;&#x6539;&#x8FDB;
+&#xFF08;1&#xFF09;&#x5185;&#x7F6E;&#x6267;&#x884C;&#x5668;&#x3002;
+&#xFF08;2&#xFF09;&#x66F4;&#x597D;&#x7684;&#x8BED;&#x4E49;&#x3002;
+&#xFF08;3&#xFF09;&#x66F4;&#x5E7F;&#x7684;&#x9002;&#x7528;&#x6027;&#x3002;
+&#xFF08;4&#xFF09;&#x8FD4;&#x56DE;&#x503C;&#x662F; Promise&#x3002;
+*/
+
+async function f() {
+    return &apos;hello world&apos;;
+}
+
+f().then(v =&gt; console.log(v))
+// &quot;hello world&quot;
+
+// &#x9519;&#x8BEF;&#x5904;&#x7406;
+// &#x7EDF;&#x4E00;&#x653E;&#x5728;try...catch&#x7ED3;&#x6784;&#x4E2D;
+async function main() {
+    try {
+      const val1 = await firstStep();
+      const val2 = await secondStep(val1);
+      const val3 = await thirdStep(val1, val2);
+
+      console.log(&apos;Final: &apos;, val3);
+    }
+    catch (err) {
+      console.error(err);
+    }
+  }
+
+// &#x5EFA;&#x8BAE;&#x4E00;&#x3001;&#x628A;await&#x547D;&#x4EE4;&#x653E;&#x5728;try...catch&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x3002;  
+// &#x5EFA;&#x8BAE;&#x4E8C;&#x3001;&#x591A;&#x4E2A;await&#x547D;&#x4EE4;&#x540E;&#x9762;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x5EFA;&#x8BAE;&#x540C;&#x65F6;&#x89E6;&#x53D1;  await Promise.all
+
+// async &#x539F;&#x7406;
+async function fn(args) {
+    // ...
+  }
+
+  // &#x7B49;&#x540C;&#x4E8E;
+
+  function fn(args) {
+    return spawn(function* () {
+      // ...
+    });
+  }
+</code></pre><pre><code class="lang-javascript">
+<span class="hljs-comment">// ES6 &#x7684;&#x7C7B;&#xFF0C;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#x3002;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-keyword">typeof</span> Point <span class="hljs-comment">// &quot;function&quot;</span>
+Point === Point.prototype.constructor <span class="hljs-comment">// true</span>
+
+
+
+<span class="hljs-comment">// class &#x7EE7;&#x627F;  extends</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+    <span class="hljs-keyword">static</span> hello() {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;hello world&apos;</span>);
+    }
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">A</span> </span>{
+  }
+
+  B.hello()  <span class="hljs-comment">// hello world</span>
+</code></pre>
+<h2 id="&#x67EF;&#x91CC;&#x5316;">&#x67EF;&#x91CC;&#x5316;</h2>
+<p>&#x67EF;&#x91CC;&#x5316;&#xFF08;currying&#xFF09;&#x6307;&#x7684;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x591A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x62C6;&#x5206;&#x6210;&#x4E00;&#x7CFB;&#x5217;&#x51FD;&#x6570;&#xFF0C;&#x6BCF;&#x4E2A;&#x62C6;&#x5206;&#x540E;&#x7684;&#x51FD;&#x6570;&#x90FD;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF08;unary&#xFF09;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> (<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+add(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// 2</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;<code>add</code>&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;<code>a</code>&#x548C;<code>b</code>&#x3002;</p>
+<p>&#x67EF;&#x91CC;&#x5316;&#x5C31;&#x662F;&#x5C06;&#x4E0A;&#x9762;&#x7684;&#x51FD;&#x6570;&#x62C6;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> (<span class="hljs-params">a</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">b</span>) </span>{
+    <span class="hljs-keyword">return</span> a + b;
+  }
+}
+<span class="hljs-comment">// &#x6216;&#x8005;&#x91C7;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x5199;&#x6CD5;</span>
+<span class="hljs-keyword">const</span> add = x =&gt; y =&gt; x + y;
+
+<span class="hljs-keyword">const</span> f = add(<span class="hljs-number">1</span>);
+f(<span class="hljs-number">1</span>) <span class="hljs-comment">// 2</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;<code>add</code>&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>a</code>&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>f</code>&#x3002;&#x51FD;&#x6570;<code>f</code>&#x4E5F;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>b</code>&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;rest &#x53C2;&#x6570;&#x4E4B;&#x540E;&#x4E0D;&#x80FD;&#x518D;&#x6709;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#xFF08;&#x5373;&#x53EA;&#x80FD;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x62A5;&#x9519;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">a, ...b, c</span>) </span>{
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>ES6 &#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x201C;&#x7BAD;&#x5934;&#x201D;&#xFF08;<code>=&gt;</code>&#xFF09;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> f = v =&gt; v;
+
+<span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E;</span>
+<span class="hljs-keyword">var</span> f = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{
+  <span class="hljs-keyword">return</span> v;
+};
+</code></pre>
+<p>&#x5982;&#x679C;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x4E0D;&#x9700;&#x8981;&#x53C2;&#x6570;&#x6216;&#x9700;&#x8981;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5706;&#x62EC;&#x53F7;&#x4EE3;&#x8868;&#x53C2;&#x6570;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x6709;&#x51E0;&#x4E2A;&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x70B9;&#x3002;</p>
+<p>&#xFF08;1&#xFF09;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x7684;<code>this</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x65F6;&#x6240;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x65F6;&#x6240;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#xFF08;2&#xFF09;&#x4E0D;&#x53EF;&#x4EE5;&#x5F53;&#x4F5C;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>new</code>&#x547D;&#x4EE4;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#xFF08;3&#xFF09;&#x4E0D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>arguments</code>&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x4E0D;&#x5B58;&#x5728;&#x3002;&#x5982;&#x679C;&#x8981;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; rest &#x53C2;&#x6570;&#x4EE3;&#x66FF;&#x3002;</p>
+<p>&#xFF08;4&#xFF09;&#x4E0D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>yield</code>&#x547D;&#x4EE4;&#xFF0C;&#x56E0;&#x6B64;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x7528;&#x4F5C; Generator &#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x56DB;&#x70B9;&#x4E2D;&#xFF0C;&#x7B2C;&#x4E00;&#x70B9;&#x5C24;&#x5176;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x3002;<code>this</code>&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x5411;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x5B83;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+  setTimeout(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;id:&apos;</span>, <span class="hljs-keyword">this</span>.id);
+  }, <span class="hljs-number">100</span>);
+}
+
+<span class="hljs-keyword">var</span> id = <span class="hljs-number">21</span>;
+
+foo.call({ id: <span class="hljs-number">42</span> });
+<span class="hljs-comment">// id: 42</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x662F;&#x666E;&#x901A;&#x51FD;&#x6570;&#xFF0C;&#x6267;&#x884C;&#x65F6;<code>this</code>&#x5E94;&#x8BE5;&#x6307;&#x5411;&#x5168;&#x5C40;&#x5BF9;&#x8C61;<code>window</code>&#xFF0C;&#x8FD9;&#x65F6;&#x5E94;&#x8BE5;&#x8F93;&#x51FA;<code>21</code>&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x5BFC;&#x81F4;<code>this</code>&#x603B;&#x662F;&#x6307;&#x5411;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x751F;&#x6548;&#x65F6;&#x6240;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x672C;&#x4F8B;&#x662F;<code>{id: 42}</code>&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x8F93;&#x51FA;&#x7684;&#x662F;<code>42</code>&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> cat = {
+  lives: <span class="hljs-number">9</span>,
+  jumps: () =&gt; {
+    <span class="hljs-keyword">this</span>.lives--;
+  }
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>cat.jumps()</code>&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x4E2A;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x662F;&#x9519;&#x8BEF;&#x7684;&#x3002;&#x8C03;&#x7528;<code>cat.jumps()</code>&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x666E;&#x901A;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x7684;<code>this</code>&#x6307;&#x5411;<code>cat</code>&#xFF1B;&#x5982;&#x679C;&#x5199;&#x6210;&#x4E0A;&#x9762;&#x90A3;&#x6837;&#x7684;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF0C;&#x4F7F;&#x5F97;<code>this</code>&#x6307;&#x5411;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x5F97;&#x5230;&#x9884;&#x671F;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5BF9;&#x8C61;&#x4E0D;&#x6784;&#x6210;&#x5355;&#x72EC;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5BFC;&#x81F4;<code>jumps</code>&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x65F6;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5C31;&#x662F;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x3002;</p>
+<pre><code>var x=11;
+var obj={
+  x:22,
+  say:function(){
+    console.log(this.x)
+  }
+}
+obj.say();
+//console.log&#x8F93;&#x51FA;&#x7684;&#x662F;22
+</code></pre><pre><code>var x=11;
+var objFather={
+  x:33,
+  obj:{
+    x:22,
+    say:()=&gt;{
+    console.log(this.x);
+    }
+  }
+}
+
+objFather.obj.say();  // 11
+</code></pre><p>&#x5BF9;&#x8C61;&#x5D4C;&#x5957;&#x6CA1;&#x6709;&#x4F5C;&#x7528;&#x57DF;&#x589E;&#x52A0;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;path/to/myModule.js&quot;</span> <span class="hljs-attr">defer</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;path/to/myModule.js&quot;</span> <span class="hljs-attr">async</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>&lt;script&gt;</code>&#x6807;&#x7B7E;&#x6253;&#x5F00;<code>defer</code>&#x6216;<code>async</code>&#x5C5E;&#x6027;&#xFF0C;&#x811A;&#x672C;&#x5C31;&#x4F1A;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x3002;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x9047;&#x5230;&#x8FD9;&#x4E00;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x5C31;&#x4F1A;&#x5F00;&#x59CB;&#x4E0B;&#x8F7D;&#x5916;&#x90E8;&#x811A;&#x672C;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x7B49;&#x5B83;&#x4E0B;&#x8F7D;&#x548C;&#x6267;&#x884C;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x3002;</p>
+<p><code>defer</code>&#x4E0E;<code>async</code>&#x7684;&#x533A;&#x522B;&#x662F;&#xFF1A;<code>defer</code>&#x8981;&#x7B49;&#x5230;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x6B63;&#x5E38;&#x6E32;&#x67D3;&#x7ED3;&#x675F;&#xFF08;DOM &#x7ED3;&#x6784;&#x5B8C;&#x5168;&#x751F;&#x6210;&#xFF0C;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x811A;&#x672C;&#x6267;&#x884C;&#x5B8C;&#x6210;&#xFF09;&#xFF0C;&#x624D;&#x4F1A;&#x6267;&#x884C;&#xFF1B;<code>async</code>&#x4E00;&#x65E6;&#x4E0B;&#x8F7D;&#x5B8C;&#xFF0C;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x5C31;&#x4F1A;&#x4E2D;&#x65AD;&#x6E32;&#x67D3;&#xFF0C;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x4EE5;&#x540E;&#xFF0C;&#x518D;&#x7EE7;&#x7EED;&#x6E32;&#x67D3;&#x3002;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;<code>defer</code>&#x662F;&#x201C;&#x6E32;&#x67D3;&#x5B8C;&#x518D;&#x6267;&#x884C;&#x201D;&#xFF0C;<code>async</code>&#x662F;&#x201C;&#x4E0B;&#x8F7D;&#x5B8C;&#x5C31;&#x6267;&#x884C;&#x201D;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;<code>defer</code>&#x811A;&#x672C;&#xFF0C;&#x4F1A;&#x6309;&#x7167;&#x5B83;&#x4EEC;&#x5728;&#x9875;&#x9762;&#x51FA;&#x73B0;&#x7684;&#x987A;&#x5E8F;&#x52A0;&#x8F7D;&#xFF0C;&#x800C;&#x591A;&#x4E2A;<code>async</code>&#x811A;&#x672C;&#x662F;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x7684;&#x3002;</p>
+<p>&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; <code>defer</code></p>
+<h3 id="&#x5185;&#x90E8;&#x53D8;&#x91CF;">&#x5185;&#x90E8;&#x53D8;&#x91CF;</h3>
+<p>ES6 &#x6A21;&#x5757;&#x5E94;&#x8BE5;&#x662F;&#x901A;&#x7528;&#x7684;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x4E0D;&#x7528;&#x4FEE;&#x6539;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x548C;&#x670D;&#x52A1;&#x5668;&#x73AF;&#x5883;&#x3002;&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x6807;&#xFF0C;Node &#x89C4;&#x5B9A; ES6 &#x6A21;&#x5757;&#x4E4B;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; CommonJS &#x6A21;&#x5757;&#x7684;&#x7279;&#x6709;&#x7684;&#x4E00;&#x4E9B;&#x5185;&#x90E8;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5C31;&#x662F;<code>this</code>&#x5173;&#x952E;&#x5B57;&#x3002;ES6 &#x6A21;&#x5757;&#x4E4B;&#x4E2D;&#xFF0C;&#x9876;&#x5C42;&#x7684;<code>this</code>&#x6307;&#x5411;<code>undefined</code>&#xFF1B;CommonJS &#x6A21;&#x5757;&#x7684;&#x9876;&#x5C42;<code>this</code>&#x6307;&#x5411;&#x5F53;&#x524D;&#x6A21;&#x5757;&#xFF0C;&#x8FD9;&#x662F;&#x4E24;&#x8005;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x5927;&#x5DEE;&#x5F02;&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;&#x4EE5;&#x4E0B;&#x8FD9;&#x4E9B;&#x9876;&#x5C42;&#x53D8;&#x91CF;&#x5728; ES6 &#x6A21;&#x5757;&#x4E4B;&#x4E2D;&#x90FD;&#x662F;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x3002;</p>
+<ul>
+<li><code>arguments</code></li>
+<li><code>require</code></li>
+<li><code>module</code></li>
+<li><code>exports</code></li>
+<li><code>__filename</code></li>
+<li><code>__dirname</code></li>
+</ul>
+<p><code>import</code>&#x547D;&#x4EE4;&#x5177;&#x6709;&#x63D0;&#x5347;&#x6548;&#x679C;&#xFF0C;&#x4F1A;&#x63D0;&#x5347;&#x5230;&#x6574;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x5934;&#x90E8;&#xFF0C;&#x9996;&#x5148;&#x6267;&#x884C;&#x3002;</p>
+<pre><code class="lang-javascript">foo();
+
+<span class="hljs-keyword">import</span> { foo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;my_module&apos;</span>;
+</code></pre>
+<p><code>import()</code>&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x6210;&#x529F;&#x4EE5;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x4F5C;<code>then</code>&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x83B7;&#x53D6;&#x8F93;&#x51FA;&#x63A5;&#x53E3;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;./myModule.js&apos;</span>)
+.then(({export1, export2}) =&gt; {
+  <span class="hljs-comment">// ...&#xB7;</span>
+});
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Promise</span>.all([
+  <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;./module1.js&apos;</span>),
+  <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;./module2.js&apos;</span>),
+  <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;./module3.js&apos;</span>),
+])
+.then(([module1, module2, module3]) =&gt; {
+   &#xB7;&#xB7;&#xB7;
+});
+</code></pre>
+<p>ES6 &#x5728;<code>Number</code>&#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x65B0;&#x63D0;&#x4F9B;&#x4E86;<code>Number.isFinite()</code>&#x548C;<code>Number.isNaN()</code>&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Number</span>.isFinite(<span class="hljs-number">15</span>); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">Number</span>.isNaN(<span class="hljs-string">&apos;true&apos;</span> / <span class="hljs-string">&apos;true&apos;</span>) <span class="hljs-comment">// true</span>
+</code></pre>
+<p><code>Number.isFinite()</code>&#x5BF9;&#x4E8E;&#x975E;&#x6570;&#x503C;&#x4E00;&#x5F8B;&#x8FD4;&#x56DE;<code>false</code>, <code>Number.isNaN()</code>&#x53EA;&#x6709;&#x5BF9;&#x4E8E;<code>NaN</code>&#x624D;&#x8FD4;&#x56DE;<code>true</code></p>
+<p>ES6 &#x5C06;&#x5168;&#x5C40;&#x65B9;&#x6CD5;<code>parseInt()</code>&#x548C;<code>parseFloat()</code>&#xFF0C;&#x79FB;&#x690D;&#x5230;<code>Number</code>&#x5BF9;&#x8C61;&#x4E0A;&#x9762;&#xFF0C;&#x884C;&#x4E3A;&#x5B8C;&#x5168;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ES5&#x7684;&#x5199;&#x6CD5;</span>
+<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&apos;12.34&apos;</span>) <span class="hljs-comment">// 12</span>
+<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">&apos;123.45#&apos;</span>) <span class="hljs-comment">// 123.45</span>
+
+<span class="hljs-comment">// ES6&#x7684;&#x5199;&#x6CD5;</span>
+<span class="hljs-built_in">Number</span>.parseInt(<span class="hljs-string">&apos;12.34&apos;</span>) <span class="hljs-comment">// 12</span>
+<span class="hljs-built_in">Number</span>.parseFloat(<span class="hljs-string">&apos;123.45#&apos;</span>) <span class="hljs-comment">// 123.45</span>
+</code></pre>
+<h2 id="math-&#x5BF9;&#x8C61;&#x7684;&#x6269;&#x5C55;">Math &#x5BF9;&#x8C61;&#x7684;&#x6269;&#x5C55;</h2>
+<p><code>Math.trunc</code>&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x53BB;&#x9664;&#x4E00;&#x4E2A;&#x6570;&#x7684;&#x5C0F;&#x6570;&#x90E8;&#x5206;&#xFF0C;&#x8FD4;&#x56DE;&#x6574;&#x6570;&#x90E8;&#x5206;&#x3002;
+<code>Math.sign</code>&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x6570;&#x5230;&#x5E95;&#x662F;&#x6B63;&#x6570;&#x3001;&#x8D1F;&#x6570;&#x3001;&#x8FD8;&#x662F;&#x96F6;&#x3002;&#x5BF9;&#x4E8E;&#x975E;&#x6570;&#x503C;&#xFF0C;&#x4F1A;&#x5148;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x503C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Math</span>.trunc(<span class="hljs-number">4.9</span>) <span class="hljs-comment">// 4</span>
+<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">-5</span>) <span class="hljs-comment">// -1</span>
+<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">5</span>) <span class="hljs-comment">// +1</span>
+<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">0</span>) <span class="hljs-comment">// +0</span>
+<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">-0</span>) <span class="hljs-comment">// -0</span>
+<span class="hljs-built_in">Math</span>.sign(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// NaN</span>
+</code></pre>
+<p>&#x4E0E;&#x4E25;&#x683C;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;===&#xFF09;&#x7684;&#x884C;&#x4E3A;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Object</span>.is(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;foo&apos;</span>)
+<span class="hljs-comment">// true</span>
+<span class="hljs-built_in">Object</span>.is({}, {})
+<span class="hljs-comment">// false</span>
+</code></pre>
+<p>&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;&#x4E00;&#x662F;<code>+0</code>&#x4E0D;&#x7B49;&#x4E8E;<code>-0</code>&#xFF0C;&#x4E8C;&#x662F;<code>NaN</code>&#x7B49;&#x4E8E;&#x81EA;&#x8EAB;&#x3002;</p>
+<h2 id="objectassign">Object.assign()</h2>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x4E0E;&#x6E90;&#x5BF9;&#x8C61;&#x6709;&#x540C;&#x540D;&#x5C5E;&#x6027;&#xFF0C;&#x6216;&#x591A;&#x4E2A;&#x6E90;&#x5BF9;&#x8C61;&#x6709;&#x540C;&#x540D;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x540E;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x4F1A;&#x8986;&#x76D6;&#x524D;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<p><code>Object.assign</code>&#x65B9;&#x6CD5;&#x5B9E;&#x884C;&#x7684;&#x662F;&#x6D45;&#x62F7;&#x8D1D;</p>
+<h3 id="&#x5C5E;&#x6027;&#x7684;&#x904D;&#x5386;">&#x5C5E;&#x6027;&#x7684;&#x904D;&#x5386;</h3>
+<p>ES6 &#x4E00;&#x5171;&#x6709; 5 &#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<p><strong>&#xFF08;1&#xFF09;for...in</strong></p>
+<p><code>for...in</code>&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x548C;&#x7EE7;&#x627F;&#x7684;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x542B; Symbol &#x5C5E;&#x6027;&#xFF09;&#x3002;</p>
+<p><strong>&#xFF08;2&#xFF09;Object.keys(obj)</strong></p>
+<p><code>Object.keys</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x62EC;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#xFF08;&#x4E0D;&#x542B;&#x7EE7;&#x627F;&#x7684;&#xFF09;&#x6240;&#x6709;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x542B; Symbol &#x5C5E;&#x6027;&#xFF09;&#x7684;&#x952E;&#x540D;&#x3002;</p>
+<p><strong>&#xFF08;3&#xFF09;Object.getOwnPropertyNames(obj)</strong></p>
+<p><code>Object.getOwnPropertyNames</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x542B; Symbol &#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x5305;&#x62EC;&#x4E0D;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#xFF09;&#x7684;&#x952E;&#x540D;&#x3002;</p>
+<p><strong>&#xFF08;4&#xFF09;Object.getOwnPropertySymbols(obj)</strong></p>
+<p><code>Object.getOwnPropertySymbols</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x6240;&#x6709; Symbol &#x5C5E;&#x6027;&#x7684;&#x952E;&#x540D;&#x3002;</p>
+<p><strong>&#xFF08;5&#xFF09;Reflect.ownKeys(obj)</strong></p>
+<p><code>Reflect.ownKeys</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x6240;&#x6709;&#x952E;&#x540D;&#xFF0C;&#x4E0D;&#x7BA1;&#x952E;&#x540D;&#x662F; Symbol &#x6216;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x4E0D;&#x7BA1;&#x662F;&#x5426;&#x53EF;&#x679A;&#x4E3E;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x7684; 5 &#x79CD;&#x65B9;&#x6CD5;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x7684;&#x952E;&#x540D;&#xFF0C;&#x90FD;&#x9075;&#x5B88;&#x540C;&#x6837;&#x7684;&#x5C5E;&#x6027;&#x904D;&#x5386;&#x7684;&#x6B21;&#x5E8F;&#x89C4;&#x5219;&#x3002;</p>
+<ul>
+<li>&#x9996;&#x5148;&#x904D;&#x5386;&#x6240;&#x6709;&#x6570;&#x503C;&#x952E;&#xFF0C;&#x6309;&#x7167;&#x6570;&#x503C;&#x5347;&#x5E8F;&#x6392;&#x5217;&#x3002;</li>
+<li>&#x5176;&#x6B21;&#x904D;&#x5386;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x952E;&#xFF0C;&#x6309;&#x7167;&#x52A0;&#x5165;&#x65F6;&#x95F4;&#x5347;&#x5E8F;&#x6392;&#x5217;&#x3002;</li>
+<li>&#x6700;&#x540E;&#x904D;&#x5386;&#x6240;&#x6709; Symbol &#x952E;&#xFF0C;&#x6309;&#x7167;&#x52A0;&#x5165;&#x65F6;&#x95F4;&#x5347;&#x5E8F;&#x6392;&#x5217;&#x3002;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Reflect</span>.ownKeys({ [<span class="hljs-built_in">Symbol</span>()]:<span class="hljs-number">0</span>, b:<span class="hljs-number">0</span>, <span class="hljs-number">10</span>:<span class="hljs-number">0</span>, <span class="hljs-number">2</span>:<span class="hljs-number">0</span>, a:<span class="hljs-number">0</span> })
+<span class="hljs-comment">// [&apos;2&apos;, &apos;10&apos;, &apos;b&apos;, &apos;a&apos;, Symbol()]</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>Reflect.ownKeys</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x5C5E;&#x6027;&#x6B21;&#x5E8F;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x9996;&#x5148;&#x662F;&#x6570;&#x503C;&#x5C5E;&#x6027;<code>2</code>&#x548C;<code>10</code>&#xFF0C;&#x5176;&#x6B21;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x5C5E;&#x6027;<code>b</code>&#x548C;<code>a</code>&#xFF0C;&#x6700;&#x540E;&#x662F; Symbol &#x5C5E;&#x6027;&#x3002;</p>
+<h3 id="&#x89E3;&#x6784;&#x8D4B;&#x503C;">&#x89E3;&#x6784;&#x8D4B;&#x503C;</h3>
+<p>&#x5BF9;&#x8C61;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7528;&#x4E8E;&#x4ECE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53D6;&#x503C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5C06;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x6240;&#x6709;&#x53EF;&#x904D;&#x5386;&#x7684;&#xFF08;enumerable&#xFF09;&#x3001;&#x4F46;&#x5C1A;&#x672A;&#x88AB;&#x8BFB;&#x53D6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5206;&#x914D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x4E0A;&#x9762;&#x3002;&#x6240;&#x6709;&#x7684;&#x952E;&#x548C;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#xFF0C;&#x90FD;&#x4F1A;&#x62F7;&#x8D1D;&#x5230;&#x65B0;&#x5BF9;&#x8C61;&#x4E0A;&#x9762;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> { x, y, ...z } = { x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, a: <span class="hljs-number">3</span>, b: <span class="hljs-number">4</span> };
+x <span class="hljs-comment">// 1</span>
+y <span class="hljs-comment">// 2</span>
+z <span class="hljs-comment">// { a: 3, b: 4 }</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7684;&#x62F7;&#x8D1D;&#x662F;&#x6D45;&#x62F7;&#x8D1D;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Promise&#x6784;&#x9020;&#x51FD;&#x6570;&#x63A5;&#x53D7; 1&#x4E2A; &#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;</span>
+<span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt;{
+
+    <span class="hljs-keyword">if</span>( <span class="hljs-comment">/* &#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x6210;&#x529F; */</span> <span class="hljs-string">&apos;success&apos;</span>) {
+        resolve(value);
+    }<span class="hljs-keyword">else</span>{
+        reject(error);
+    }
+})
+<span class="hljs-comment">// Promise&#x5B9E;&#x4F8B;&#x751F;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;then&#x65B9;&#x6CD5;&#x5206;&#x522B;&#x6307;&#x5B9A;resolved&#x72B6;&#x6001;&#x548C;rejected&#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">// then&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;, &#x7B2C;2&#x4E2A;&#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;</span>
+promise.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{});
+
+<span class="hljs-comment">// Promise &#x65B0;&#x5EFA;&#x540E;&#x5C31;&#x4F1A;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x3002;</span>
+
+<span class="hljs-comment">// &#x7528;Promise&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x7684; Ajax &#x64CD;&#x4F5C;&#x7684;&#x4F8B;&#x5B50;</span>
+
+<span class="hljs-keyword">const</span> getJSON = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url</span>) </span>{
+    <span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{
+      <span class="hljs-keyword">const</span> handler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.readyState !== <span class="hljs-number">4</span>) {
+          <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === <span class="hljs-number">200</span>) {
+          resolve(<span class="hljs-keyword">this</span>.response);
+        } <span class="hljs-keyword">else</span> {
+          reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-keyword">this</span>.statusText));
+        }
+      };
+      <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> XMLHttpRequest();
+      client.open(<span class="hljs-string">&quot;GET&quot;</span>, url);
+      client.onreadystatechange = handler;
+      client.responseType = <span class="hljs-string">&quot;json&quot;</span>;
+      client.setRequestHeader(<span class="hljs-string">&quot;Accept&quot;</span>, <span class="hljs-string">&quot;application/json&quot;</span>);
+      client.send();
+
+    });
+
+    <span class="hljs-keyword">return</span> promise;
+  };
+
+  getJSON(<span class="hljs-string">&quot;/posts.json&quot;</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">json</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Contents: &apos;</span> + json);
+  }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;&#x51FA;&#x9519;&#x4E86;&apos;</span>, error);
+  });
+
+
+<span class="hljs-comment">//   &#x8C03;&#x7528;resolve&#x6216;reject&#x5E76;&#x4E0D;&#x4F1A;&#x7EC8;&#x7ED3; Promise &#x7684;&#x53C2;&#x6570;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x3002;</span>
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    resolve(<span class="hljs-number">1</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>);
+}).then((r) =&gt; {
+    <span class="hljs-built_in">console</span>.log(r);
+});
+<span class="hljs-comment">// 2</span>
+<span class="hljs-comment">// 1</span>
+
+<span class="hljs-comment">// &#x94FE;&#x5F0F;&#x8C03;&#x7528;  &#x7B2C;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x4F20;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</span>
+getJSON(<span class="hljs-string">&quot;/posts.json&quot;</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">json</span>) </span>{
+    <span class="hljs-keyword">return</span> json.post;
+  }).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">post</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+  });
+
+
+<span class="hljs-comment">// ****&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;then&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x5B9A;&#x4E49; Reject &#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x5373;then&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;catch&#x65B9;&#x6CD5;&#x3002;</span>
+<span class="hljs-comment">// Reject &#x548C; catch&#x65B9;&#x6CD5;&#x90FD;&#x5B58;&#x5728;&#xFF0C;&#x8C01;&#x5728;&#x524D;&#x9762;-&#x5148;&#x8C03;&#x7528;&#x8C01;&#x3002;</span>
+
+<span class="hljs-comment">// good</span>
+promise
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{ <span class="hljs-comment">//cb</span>
+    <span class="hljs-comment">// success</span>
+  })
+  .catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+    <span class="hljs-comment">// &#x5904;&#x7406;&#x524D;&#x9762;&#x6240;&#x6709;Promise&#x4EA7;&#x751F;&#x7684;&#x9519;&#x8BEF;</span>
+  });
+
+<span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+    resolve(<span class="hljs-string">&apos;ok&apos;</span>);
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;test&apos;</span>);  <span class="hljs-comment">// &#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x6539;&#x53D8;&#xFF0C;&#x4E0D;&#x4F1A;&#x6267;&#x884C;</span>
+});
+promise
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{ <span class="hljs-built_in">console</span>.log(value) })
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{ <span class="hljs-built_in">console</span>.log(error) });  <span class="hljs-comment">// throw &#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x6B64;&#x5904;&#x6CA1;&#x6709;&#x9519;&#x8BEF;&#x6355;&#x83B7;</span>
+  <span class="hljs-comment">// ok</span>
+
+
+  someAsyncThing().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> someOtherAsyncThing();
+  }).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;oh no&apos;</span>, error);
+    <span class="hljs-comment">// &#x4E0B;&#x9762;&#x4E00;&#x884C;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;y&#x6CA1;&#x6709;&#x58F0;&#x660E;</span>
+    y + <span class="hljs-number">2</span>;
+  }).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;carry on&apos;</span>, error);
+  });
+  <span class="hljs-comment">// oh no [ReferenceError: x is not defined]</span>
+  <span class="hljs-comment">// carry on [ReferenceError: y is not defined]</span>
+
+  promise
+  .then(result =&gt; {})
+  .catch(error =&gt; {})
+  .finally(() =&gt; {});
+
+
+<span class="hljs-comment">//   finally &#x5B9E;&#x73B0;</span>
+  <span class="hljs-built_in">Promise</span>.prototype.finally = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">callback</span>) </span>{
+    <span class="hljs-keyword">let</span> P = <span class="hljs-keyword">this</span>.constructor;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.then(
+      value  =&gt; P.resolve(callback()).then(() =&gt; value),
+      reason =&gt; P.resolve(callback()).then(() =&gt; { <span class="hljs-keyword">throw</span> reason })
+    );
+  };
+
+<span class="hljs-comment">//   Promise.all()</span>
+<span class="hljs-keyword">const</span> p = <span class="hljs-built_in">Promise</span>.all([p1, p2, p3]); <span class="hljs-comment">// &#x90FD;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x8FD4;&#x56DE;&#x3002;&#x6709;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#xFF0C;&#x5931;&#x8D25;&#x5B9E;&#x4F8B;&#x4F20;&#x7ED9;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C;p2&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684;catch&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;Promise.all()&#x7684;catch&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">const</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    resolve(<span class="hljs-string">&apos;hello&apos;</span>);
+  })
+  .then(result =&gt; result);
+
+  <span class="hljs-keyword">const</span> p2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;&#x62A5;&#x9519;&#x4E86;&apos;</span>);
+  })
+  .then(result =&gt; result);
+
+  <span class="hljs-built_in">Promise</span>.all([p1, p2])
+  .then(result =&gt; <span class="hljs-built_in">console</span>.log(result))
+  .catch(e =&gt; <span class="hljs-built_in">console</span>.log(e));
+  <span class="hljs-comment">// Error: &#x62A5;&#x9519;&#x4E86;</span>
+
+<span class="hljs-comment">//   Promise.race()  </span>
+<span class="hljs-keyword">const</span> p = <span class="hljs-built_in">Promise</span>.race([p1, p2, p3]);  <span class="hljs-comment">// &#x4E00;&#x65E6;&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;promise&#x89E3;&#x51B3;&#x6216;&#x62D2;&#x7EDD;&#xFF0C;&#x8FD4;&#x56DE;&#x7684; promise&#x5C31;&#x4F1A;&#x89E3;&#x51B3;&#x6216;&#x62D2;&#x7EDD;&#x3002;</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C; 5 &#x79D2;&#x4E4B;&#x5185;fetch&#x65B9;&#x6CD5;&#x65E0;&#x6CD5;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x53D8;&#x91CF;p&#x7684;&#x72B6;&#x6001;&#x5C31;&#x4F1A;&#x53D8;&#x4E3A;rejected&#xFF0C;&#x4ECE;&#x800C;&#x89E6;&#x53D1;catch&#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</span>
+<span class="hljs-keyword">const</span> p = <span class="hljs-built_in">Promise</span>.race([
+    fetch(<span class="hljs-string">&apos;/resource-that-may-take-a-while&apos;</span>),
+    <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+      setTimeout(() =&gt; reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;request timeout&apos;</span>)), <span class="hljs-number">5000</span>)
+    })
+  ]);
+
+  p
+  .then(<span class="hljs-built_in">console</span>.log)
+  .catch(<span class="hljs-built_in">console</span>.error);
+
+
+<span class="hljs-keyword">var</span> promise1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+  setTimeout(resolve, <span class="hljs-number">1000</span>, <span class="hljs-string">&apos;one&apos;</span>);
+});
+
+<span class="hljs-keyword">var</span> promise2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+  setTimeout(resolve, <span class="hljs-number">500</span>, <span class="hljs-string">&apos;two&apos;</span>);
+});
+
+<span class="hljs-built_in">Promise</span>.race([promise1, promise2]).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(value);
+<span class="hljs-comment">// Both resolve, but promise2 is faster</span>
+}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
+<span class="hljs-built_in">console</span>.log(error);
+});
+<span class="hljs-comment">//&apos;two&apos;</span>
+
+
+<span class="hljs-comment">// setTimeout &#x4ECE;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x5F00;&#x59CB;&#xFF0C;&#x4E3A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x53C2;&#x6570;</span>
+setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a,b</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(a,b);
+},<span class="hljs-number">10</span>,<span class="hljs-number">200</span>,<span class="hljs-number">400</span>);
+<span class="hljs-comment">//200 400</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">/*
+console.log(typeof NaN);  //number
+console.log(typeof NAN);  //undefined
+*/</span>
+
+
+<span class="hljs-comment">/*
+//forEach &#x548C; map
+let arr = [1,2,3,3,3];
+let foreachArr = arr.forEach((x,index) =&gt; arr[index]=2*x);  // undefined   [2, 4, 6, 6, 6] arr&#x7684;&#x503C;&#x88AB;&#x4FEE;&#x6539;
+let mapArr = arr.map((x,index) =&gt; arr[index]=2*x);  // [2, 4, 6, 6, 6]   [2, 4, 6, 6, 6]  arr&#x7684;&#x503C;&#x88AB;&#x4FEE;&#x6539;
+console.log(arr, mapArr);
+// forEach &#x65E0;&#x8FD4;&#x56DE;&#x503C; &#xFF0C; map&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF08;&#x65B0;&#x6570;&#x7EC4;&#x5360;&#x5185;&#x5B58;&#xFF09;
+
+*/</span>
+
+
+<span class="hljs-comment">// set&#x548C;map&#x7684;&#x7528;&#x6CD5;  1&#x3001;&#x53BB;&#x91CD;&#x3002;2&#x3001;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</span>
+<span class="hljs-comment">// set &#x4E0D;&#x91CD;&#x590D;&#x503C;&#x96C6;&#x5408;</span>
+<span class="hljs-comment">/*
+const s = new Set();
+[1,1,2,2,3,3].forEach(x=&gt;s.add(x));   // add &#x662F; set&#x7684;&#x65B9;&#x6CD5;
+for(let i of s){
+    console.log(i);
+}
+console.log(s, &apos;s&apos;);
+
+let arr = [1,2,3,3,3];
+let str = &apos;abbbbc&apos;;
+// &#x53BB;&#x9664; &#x6570;&#x7EC4;&#x3001;&#x5B57;&#x7B26;&#x4E32; &#x7684;&#x91CD;&#x590D;&#x6210;&#x5458;&#xFF08;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;
+let newArr = [...new Set(arr)];
+let newStr = [...new Set(str)].join(&apos;&apos;);
+
+console.log(newArr, newStr);
+
+// 2&#x3001;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;  size  &#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#xFF08;4&#x4E2A;&#xFF0C;&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#xFF09;&#x548C;&#x904D;&#x5386;&#x65B9;&#x6CD5;&#xFF08;4&#x4E2A;&#xFF0C;
+
+s.add(1) //&#x6DFB;&#x52A0;&#x67D0;&#x4E2A;&#x503C;&#xFF0C;&#x8FD4;&#x56DE; Set &#x7ED3;&#x6784;&#x672C;&#x8EAB;
+s.delete(1) //&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x503C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x5220;&#x9664;&#x662F;&#x5426;&#x6210;&#x529F;&#x3002;
+s.has(1) //&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x8BE5;&#x503C;&#x662F;&#x5426;&#x4E3A;Set&#x7684;&#x6210;&#x5458;&#x3002;
+s.clear() //&#x6E05;&#x9664;&#x6240;&#x6709;&#x6210;&#x5458;&#xFF0C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;
+
+s.add(1).add(2).add(2).add(3);
+s.size // 2
+s.has(1) // true
+s.has(4) // false
+
+s.delete(2);
+s.has(2) // false
+
+console.log(s, &apos;&#x904D;&#x5386;&apos;);
+for (let item of s.keys()) {
+    console.log(item);   // 1 3
+}
+for (let item of s.values()) {
+    console.log(item);   // 1,3
+}
+for (let item of s.entries()) {
+    console.log(item);   // [1, 1]   [3, 3]
+}
+
+s.forEach((index, item) =&gt; console.log(item));
+
+&#x6570;&#x7EC4;&#x7684;map&#x548C;filter&#x65B9;&#x6CD5;&#x95F4;&#x63A5;&#x4F7F;&#x7528; Set
+let set = new Set([1, 2, 3]);
+set = new Set([...set].map(x =&gt; x * 2));
+// &#x8FD4;&#x56DE;Set&#x7ED3;&#x6784;&#xFF1A;{2, 4, 6}
+
+let set = new Set([1, 2, 3, 4, 5]);
+set = new Set([...set].filter(x =&gt; (x % 2) == 0));
+// &#x8FD4;&#x56DE;Set&#x7ED3;&#x6784;&#xFF1A;{2, 4}
+
+// &#x5E76;&#x96C6;&#xFF08;Union&#xFF09;&#x3001;&#x4EA4;&#x96C6;&#xFF08;Intersect&#xFF09;&#x548C;&#x5DEE;&#x96C6;&#xFF08;Difference&#xFF09;
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
+
+// &#x5E76;&#x96C6;
+let union = new Set([...a, ...b]);
+// Set {1, 2, 3, 4}
+
+// &#x4EA4;&#x96C6;
+let intersect = new Set([...a].filter(x =&gt; b.has(x)));
+// set {2, 3}
+
+// &#x5DEE;&#x96C6;
+let difference = new Set([...a].filter(x =&gt; !b.has(x)));
+// Set {1}
+
+new Set([1,2,{},{},2,3,NaN,NaN])   //Set(5) {1, 2, {}, {}, 3, NaN}   &#x7A7A;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x76F8;&#x7B49;&#x7684;&#xFF0C;NaN&#x662F;&#x76F8;&#x7B49;&#x7684;
+
+*/</span>
+
+<span class="hljs-comment">// map &#x952E;&#x503C;&#x5BF9;&#x96C6;&#x5408;  &#x662F;&#x548C;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7ED1;&#x5B9A;&#x7684;&#x3002;</span>
+<span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+map.set(<span class="hljs-string">&apos;aa&apos;</span>,<span class="hljs-string">&apos;aa&apos;</span>);
+map.get(<span class="hljs-string">&apos;aa&apos;</span>);
+<span class="hljs-built_in">console</span>.log(map);
+
+<span class="hljs-keyword">const</span> m1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([[<span class="hljs-string">&apos;name&apos;</span>,<span class="hljs-string">&apos;caiyi&apos;</span> ],[<span class="hljs-string">&apos;title&apos;</span>,<span class="hljs-string">&apos;author&apos;</span>]]);
+<span class="hljs-comment">// &#x5B9E;&#x9645;&#x4E0A;  &#x4E0A;&#x9762;&#x7B49;&#x4EF7;&#x4E0B;&#x9762;</span>
+<span class="hljs-comment">// &#x9664;&#x4E86;&#x6570;&#x7EC4;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x90FD;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;map&#x7684;&#x53C2;&#x6570;</span>
+<span class="hljs-keyword">const</span> items = [
+    [<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;&#x5F20;&#x4E09;&apos;</span>],
+    [<span class="hljs-string">&apos;title&apos;</span>, <span class="hljs-string">&apos;Author&apos;</span>]
+  ];
+
+<span class="hljs-keyword">const</span> m = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+items.forEach(([key, value]) =&gt; m.set(key,value));
+
+<span class="hljs-built_in">console</span>.log(m.size);
+<span class="hljs-built_in">console</span>.log(m.has(<span class="hljs-string">&apos;name&apos;</span>));
+<span class="hljs-built_in">console</span>.log(m.get(<span class="hljs-string">&apos;name&apos;</span>));
+
+
+m.set(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;aaa&apos;</span>).set(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;bbb&apos;</span>);
+m.get(<span class="hljs-number">1</span>) <span class="hljs-comment">// &quot;bbb&quot;    &#x8986;&#x76D6;&#x524D;&#x4E00;&#x6B21;&#x7684;&#x503C;</span>
+
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>().get(<span class="hljs-string">&apos;asfddfsasadf&apos;</span>)
+<span class="hljs-comment">// undefined    &#x672A;&#x77E5;&#x7684;&#x952E; =&#x300B; undefined</span>
+
+<span class="hljs-keyword">const</span> map2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+
+map2.set([<span class="hljs-string">&apos;a&apos;</span>], <span class="hljs-number">555</span>);
+<span class="hljs-built_in">console</span>.log(map2.get([<span class="hljs-string">&apos;a&apos;</span>])); <span class="hljs-comment">// undefined  &#x5185;&#x5B58;&#x5730;&#x5740;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;</span>
+
+
+<span class="hljs-comment">// map&#x5C5E;&#x6027;&#x548C;&#x904D;&#x5386;&#x65B9;&#x6CD5;</span>
+<span class="hljs-comment">// size</span>
+<span class="hljs-comment">// set</span>
+<span class="hljs-comment">// get</span>
+<span class="hljs-comment">// has</span>
+<span class="hljs-comment">// delete  &#x6210;&#x529F; true  &#x5931;&#x8D25; false</span>
+<span class="hljs-comment">// clear  &#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;</span>
+
+<span class="hljs-comment">// &#x904D;&#x5386;&#x548C;set&#x5DEE;&#x4E0D;&#x591A;  &#x7C7B;&#x4F3C;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">// keys  </span>
+<span class="hljs-comment">// values </span>
+<span class="hljs-comment">// entries</span>
+<span class="hljs-comment">// forEach</span>
+
+
+<span class="hljs-comment">// &#x540C;&#x6837; &#x6709;weakMap &#x5178;&#x578B;&#x573A;&#x5408;&#x5C31;&#x662F; DOM &#x8282;&#x70B9;&#x4F5C;&#x4E3A;&#x952E;&#x540D;&#x3002;</span>
+<span class="hljs-keyword">let</span> myElement = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;logo&apos;</span>);
+<span class="hljs-keyword">let</span> myWeakmap = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>();
+
+myWeakmap.set(myElement, {timesClicked: <span class="hljs-number">0</span>});
+
+myElement.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> logoData = myWeakmap.get(myElement);
+  logoData.timesClicked++;
+}, <span class="hljs-literal">false</span>);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="http.html" class="navigation navigation-prev " aria-label="Previous page: 1.1.4 http">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="antd.html" class="navigation navigation-next " aria-label="Next page: 2.1.1 Antd 应用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.2.1 ECMAScript 6【完】","level":"1.7","depth":1,"next":{"title":"2.1.1 Antd 应用","level":"1.8","depth":1,"path":"docs/antd.md","ref":"docs/antd.md","articles":[]},"previous":{"title":"1.1.4 http","level":"1.6","depth":1,"path":"docs/http.md","ref":"docs/http.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"蔡毅","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"9787121324758","variables":{},"title":"cy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"cy的个人博客":"https://blog.csdn.net/chdyiboke/","cy的github":"https://github.com/chdyiboke/"}},"gitbook":"*","description":"只要你想做的事，全世界都会给你让路。","extension":null},"file":{"path":"docs/ES6.md","mtime":"2019-10-08T12:28:55.299Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-23T11:47:07.788Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

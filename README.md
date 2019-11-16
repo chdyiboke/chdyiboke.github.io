@@ -1,7 +1,7 @@
 # 前端必备
 学问是经验的积累，才能是刻苦的忍耐。 ---【美】爱因斯坦
 ## 1 基础
-### 1.1 核心
+### 1.1 核心【1】
 ```bash
 $ javascript
 $ css3
@@ -9,7 +9,7 @@ $ html5
 $ http网络相关
 ```
 ### 1.2 书及官网
-* ES6 https://github.com/ruanyf/es6tutorial
+* ES6 https://github.com/ruanyf/es6tutorial【完】
 * 红宝书
 * css3权威指南
 * h5新标签：<audio> 和 <video>
@@ -30,6 +30,7 @@ $ http网络相关
 ### 2.2工具
 * mac（终端）使用
 * vs code
+* md5 语法【完】
 
 
 ### 2.3代码管理
@@ -40,12 +41,13 @@ $ http网络相关
 
 ## 3 进阶
 
-### 3.1工程化
+### 3.1工程化【中】
+$ node(npm yarn)
 $ 工程化(webpack, gulp)
-$ node(npm yarn koa pm2 nodemon config plus.yml)
+$ koa pm2 nodemon config plus.yml
 
 ### 3.2规范
-$ typescript
+$ typescript  阮一峰： https://ts.xcatliu.com/
 $ eslint
 > 规范继承于 `eslint-config-airbnb`
 
@@ -66,3 +68,8 @@ $ eslint
 ### 4.4算法与数据结构
 
 ### 4.5设计模式
+
+## 5 work
+$技术分享 
+
+## 6 收藏（git工程、电影、书籍、等等

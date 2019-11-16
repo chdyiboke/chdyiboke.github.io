@@ -1,22 +1,21 @@
-# let 和 const 命令
+# 2019-10-1看完》》》CSS3
+
+let 和 const 命令
 
 ## let 命令
 
-### 基本用法
-
-ES6 新增了`let`命令，用来声明变量。它的用法类似于`var`，但是所声明的变量，只在`let`命令所在的代码块内有效。
-
-```javascript
-{
-  let a = 10;
-  var b = 1;
-}
-
-a // ReferenceError: a is not defined.
-b // 1
 ```
+[let声明变量不在window里](https://stackoverflow.com/questions/55030498/why-dont-const-and-let-statements-get-defined-on-the-window-object) 
+const constVar = 'some string';
+let letVar = 'some string';
+var varVar = 'some string';
 
-上面代码在代码块之中，分别用`let`和`var`声明了两个变量。然后在代码块之外调用这两个变量，结果`let`声明的变量报错，`var`声明的变量返回了正确的值。这表明，`let`声明的变量只在它所在的代码块有效。
+(function() {
+  console.log(window.constVar); // prints undefined
+  console.log(window.letVar); // prints undefined
+  console.log(window.varVar); // prints 'some string'
+})();
+```
 
 `for`循环的计数器，就很合适使用`let`命令。
 
@@ -29,533 +28,8 @@ console.log(i);
 // ReferenceError: i is not defined
 ```
 
-上面代码中，计数器`i`只在`for`循环体内有效，在循环体外引用就会报错。
+暂时性死区的本质就是，只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。
 
-下面的代码如果使用`var`，最后输出的是`10`。
-
-```javascript
-var a = [];
-for (var i = 0; i < 10; i++) {
-  a[i] = function () {
-    console.log(i);
-  };
-}
-a[6](); // 10
-```
-
-上面代码中，变量`i`是`var`命令声明的，在全局范围内都有效，所以全局只有一个变量`i`。每一次循环，变量`i`的值都会发生改变，而循环内被赋给数组`a`的函数内部的`console.log(i)`，里面的`i`指向的就是全局的`i`。也就是说，所有数组`a`的成员里面的`i`，指向的都是同一个`i`，导致运行时输出的是最后一轮的`i`的值，也就是 10。
-
-如果使用`let`，声明的变量仅在块级作用域内有效，最后输出的是 6。
-
-```javascript
-var a = [];
-for (let i = 0; i < 10; i++) {
-  a[i] = function () {
-    console.log(i);
-  };
-}
-a[6](); // 6
-```
-
-上面代码中，变量`i`是`let`声明的，当前的`i`只在本轮循环有效，所以每一次循环的`i`其实都是一个新的变量，所以最后输出的是`6`。你可能会问，如果每一轮循环的变量`i`都是重新声明的，那它怎么知道上一轮循环的值，从而计算出本轮循环的值？这是因为 JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量`i`时，就在上一轮循环的基础上进行计算。
-
-另外，`for`循环还有一个特别之处，就是设置循环变量的那部分是一个父作用域，而循环体内部是一个单独的子作用域。
-
-```javascript
-for (let i = 0; i < 3; i++) {
-  let i = 'abc';
-  console.log(i);
-}
-// abc
-// abc
-// abc
-```
-
-上面代码正确运行，输出了 3 次`abc`。这表明函数内部的变量`i`与循环变量`i`不在同一个作用域，有各自单独的作用域。
-
-### 不存在变量提升
-
-`var`命令会发生“变量提升”现象，即变量可以在声明之前使用，值为`undefined`。这种现象多多少少是有些奇怪的，按照一般的逻辑，变量应该在声明语句之后才可以使用。
-
-为了纠正这种现象，`let`命令改变了语法行为，它所声明的变量一定要在声明后使用，否则报错。
-
-```javascript
-// var 的情况
-console.log(foo); // 输出undefined
-var foo = 2;
-
-// let 的情况
-console.log(bar); // 报错ReferenceError
-let bar = 2;
-```
-
-上面代码中，变量`foo`用`var`命令声明，会发生变量提升，即脚本开始运行时，变量`foo`已经存在了，但是没有值，所以会输出`undefined`。变量`bar`用`let`命令声明，不会发生变量提升。这表示在声明它之前，变量`bar`是不存在的，这时如果用到它，就会抛出一个错误。
-
-### 暂时性死区
-
-只要块级作用域内存在`let`命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。
-
-```javascript
-var tmp = 123;
-
-if (true) {
-  tmp = 'abc'; // ReferenceError
-  let tmp;
-}
-```
-
-上面代码中，存在全局变量`tmp`，但是块级作用域内`let`又声明了一个局部变量`tmp`，导致后者绑定这个块级作用域，所以在`let`声明变量前，对`tmp`赋值会报错。
-
-ES6 明确规定，如果区块中存在`let`和`const`命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。
-
-总之，在代码块内，使用`let`命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。
-
-```javascript
-if (true) {
-  // TDZ开始
-  tmp = 'abc'; // ReferenceError
-  console.log(tmp); // ReferenceError
-
-  let tmp; // TDZ结束
-  console.log(tmp); // undefined
-
-  tmp = 123;
-  console.log(tmp); // 123
-}
-```
-
-上面代码中，在`let`命令声明变量`tmp`之前，都属于变量`tmp`的“死区”。
-
-“暂时性死区”也意味着`typeof`不再是一个百分之百安全的操作。
-
-```javascript
-typeof x; // ReferenceError
-let x;
-```
-
-上面代码中，变量`x`使用`let`命令声明，所以在声明之前，都属于`x`的“死区”，只要用到该变量就会报错。因此，`typeof`运行时就会抛出一个`ReferenceError`。
-
-作为比较，如果一个变量根本没有被声明，使用`typeof`反而不会报错。
-
-```javascript
-typeof undeclared_variable // "undefined"
-```
-
-上面代码中，`undeclared_variable`是一个不存在的变量名，结果返回“undefined”。所以，在没有`let`之前，`typeof`运算符是百分之百安全的，永远不会报错。现在这一点不成立了。这样的设计是为了让大家养成良好的编程习惯，变量一定要在声明之后使用，否则就报错。
-
-有些“死区”比较隐蔽，不太容易发现。
-
-```javascript
-function bar(x = y, y = 2) {
-  return [x, y];
-}
-
-bar(); // 报错
-```
-
-上面代码中，调用`bar`函数之所以报错（某些实现可能不报错），是因为参数`x`默认值等于另一个参数`y`，而此时`y`还没有声明，属于“死区”。如果`y`的默认值是`x`，就不会报错，因为此时`x`已经声明了。
-
-```javascript
-function bar(x = 2, y = x) {
-  return [x, y];
-}
-bar(); // [2, 2]
-```
-
-另外，下面的代码也会报错，与`var`的行为不同。
-
-```javascript
-// 不报错
-var x = x;
-
-// 报错
-let x = x;
-// ReferenceError: x is not defined
-```
-
-上面代码报错，也是因为暂时性死区。使用`let`声明变量时，只要变量在还没有声明完成前使用，就会报错。上面这行就属于这个情况，在变量`x`的声明语句还没有执行完成前，就去取`x`的值，导致报错”x 未定义“。
-
-ES6 规定暂时性死区和`let`、`const`语句不出现变量提升，主要是为了减少运行时错误，防止在变量声明前就使用这个变量，从而导致意料之外的行为。这样的错误在 ES5 是很常见的，现在有了这种规定，避免此类错误就很容易了。
-
-总之，暂时性死区的本质就是，只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。
-
-### 不允许重复声明
-
-`let`不允许在相同作用域内，重复声明同一个变量。
-
-```javascript
-// 报错
-function func() {
-  let a = 10;
-  var a = 1;
-}
-
-// 报错
-function func() {
-  let a = 10;
-  let a = 1;
-}
-```
-
-因此，不能在函数内部重新声明参数。
-
-```javascript
-function func(arg) {
-  let arg;
-}
-func() // 报错
-
-function func(arg) {
-  {
-    let arg;
-  }
-}
-func() // 不报错
-```
-
-## 块级作用域
-
-### 为什么需要块级作用域？
-
-ES5 只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。
-
-第一种场景，内层变量可能会覆盖外层变量。
-
-```javascript
-var tmp = new Date();
-
-function f() {
-  console.log(tmp);
-  if (false) {
-    var tmp = 'hello world';
-  }
-}
-
-f(); // undefined
-```
-
-上面代码的原意是，`if`代码块的外部使用外层的`tmp`变量，内部使用内层的`tmp`变量。但是，函数`f`执行后，输出结果为`undefined`，原因在于变量提升，导致内层的`tmp`变量覆盖了外层的`tmp`变量。
-
-第二种场景，用来计数的循环变量泄露为全局变量。
-
-```javascript
-var s = 'hello';
-
-for (var i = 0; i < s.length; i++) {
-  console.log(s[i]);
-}
-
-console.log(i); // 5
-```
-
-上面代码中，变量`i`只用来控制循环，但是循环结束后，它并没有消失，泄露成了全局变量。
-
-### ES6 的块级作用域
-
-`let`实际上为 JavaScript 新增了块级作用域。
-
-```javascript
-function f1() {
-  let n = 5;
-  if (true) {
-    let n = 10;
-  }
-  console.log(n); // 5
-}
-```
-
-上面的函数有两个代码块，都声明了变量`n`，运行后输出 5。这表示外层代码块不受内层代码块的影响。如果两次都使用`var`定义变量`n`，最后输出的值才是 10。
-
-ES6 允许块级作用域的任意嵌套。
-
-```javascript
-{{{{
-  {let insane = 'Hello World'}
-  console.log(insane); // 报错
-}}}};
-```
-
-上面代码使用了一个五层的块级作用域，每一层都是一个单独的作用域。第四层作用域无法读取第五层作用域的内部变量。
-
-内层作用域可以定义外层作用域的同名变量。
-
-```javascript
-{{{{
-  let insane = 'Hello World';
-  {let insane = 'Hello World'}
-}}}};
-```
-
-块级作用域的出现，实际上使得获得广泛应用的匿名立即执行函数表达式（匿名 IIFE）不再必要了。
-
-```javascript
-// IIFE 写法
-(function () {
-  var tmp = ...;
-  ...
-}());
-
-// 块级作用域写法
-{
-  let tmp = ...;
-  ...
-}
-```
-
-### 块级作用域与函数声明
-
-函数能不能在块级作用域之中声明？这是一个相当令人混淆的问题。
-
-ES5 规定，函数只能在顶层作用域和函数作用域之中声明，不能在块级作用域声明。
-
-```javascript
-// 情况一
-if (true) {
-  function f() {}
-}
-
-// 情况二
-try {
-  function f() {}
-} catch(e) {
-  // ...
-}
-```
-
-上面两种函数声明，根据 ES5 的规定都是非法的。
-
-但是，浏览器没有遵守这个规定，为了兼容以前的旧代码，还是支持在块级作用域之中声明函数，因此上面两种情况实际都能运行，不会报错。
-
-ES6 引入了块级作用域，明确允许在块级作用域之中声明函数。ES6 规定，块级作用域之中，函数声明语句的行为类似于`let`，在块级作用域之外不可引用。
-
-```javascript
-function f() { console.log('I am outside!'); }
-
-(function () {
-  if (false) {
-    // 重复声明一次函数f
-    function f() { console.log('I am inside!'); }
-  }
-
-  f();
-}());
-```
-
-上面代码在 ES5 中运行，会得到“I am inside!”，因为在`if`内声明的函数`f`会被提升到函数头部，实际运行的代码如下。
-
-```javascript
-// ES5 环境
-function f() { console.log('I am outside!'); }
-
-(function () {
-  function f() { console.log('I am inside!'); }
-  if (false) {
-  }
-  f();
-}());
-```
-
-ES6 就完全不一样了，理论上会得到“I am outside!”。因为块级作用域内声明的函数类似于`let`，对作用域之外没有影响。但是，如果你真的在 ES6 浏览器中运行一下上面的代码，是会报错的，这是为什么呢？
-
-```javascript
-// 浏览器的 ES6 环境
-function f() { console.log('I am outside!'); }
-
-(function () {
-  if (false) {
-    // 重复声明一次函数f
-    function f() { console.log('I am inside!'); }
-  }
-
-  f();
-}());
-// Uncaught TypeError: f is not a function
-```
-
-上面的代码在 ES6 浏览器中，都会报错。
-
-原来，如果改变了块级作用域内声明的函数的处理规则，显然会对老代码产生很大影响。为了减轻因此产生的不兼容问题，ES6 在[附录 B](http://www.ecma-international.org/ecma-262/6.0/index.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics)里面规定，浏览器的实现可以不遵守上面的规定，有自己的[行为方式](http://stackoverflow.com/questions/31419897/what-are-the-precise-semantics-of-block-level-functions-in-es6)。
-
-- 允许在块级作用域内声明函数。
-- 函数声明类似于`var`，即会提升到全局作用域或函数作用域的头部。
-- 同时，函数声明还会提升到所在的块级作用域的头部。
-
-注意，上面三条规则只对 ES6 的浏览器实现有效，其他环境的实现不用遵守，还是将块级作用域的函数声明当作`let`处理。
-
-根据这三条规则，浏览器的 ES6 环境中，块级作用域内声明的函数，行为类似于`var`声明的变量。上面的例子实际运行的代码如下。
-
-```javascript
-// 浏览器的 ES6 环境
-function f() { console.log('I am outside!'); }
-(function () {
-  var f = undefined;
-  if (false) {
-    function f() { console.log('I am inside!'); }
-  }
-
-  f();
-}());
-// Uncaught TypeError: f is not a function
-```
-
-考虑到环境导致的行为差异太大，应该避免在块级作用域内声明函数。如果确实需要，也应该写成函数表达式，而不是函数声明语句。
-
-```javascript
-// 块级作用域内部的函数声明语句，建议不要使用
-{
-  let a = 'secret';
-  function f() {
-    return a;
-  }
-}
-
-// 块级作用域内部，优先使用函数表达式
-{
-  let a = 'secret';
-  let f = function () {
-    return a;
-  };
-}
-```
-
-另外，还有一个需要注意的地方。ES6 的块级作用域必须有大括号，如果没有大括号，JavaScript 引擎就认为不存在块级作用域。
-
-```javascript
-// 第一种写法，报错
-if (true) let x = 1;
-
-// 第二种写法，不报错
-if (true) {
-  let x = 1;
-}
-```
-
-上面代码中，第一种写法没有大括号，所以不存在块级作用域，而`let`只能出现在当前作用域的顶层，所以报错。第二种写法有大括号，所以块级作用域成立。
-
-函数声明也是如此，严格模式下，函数只能声明在当前作用域的顶层。
-
-```javascript
-// 不报错
-'use strict';
-if (true) {
-  function f() {}
-}
-
-// 报错
-'use strict';
-if (true)
-  function f() {}
-```
-
-## const 命令
-
-### 基本用法
-
-`const`声明一个只读的常量。一旦声明，常量的值就不能改变。
-
-```javascript
-const PI = 3.1415;
-PI // 3.1415
-
-PI = 3;
-// TypeError: Assignment to constant variable.
-```
-
-上面代码表明改变常量的值会报错。
-
-`const`声明的变量不得改变值，这意味着，`const`一旦声明变量，就必须立即初始化，不能留到以后赋值。
-
-```javascript
-const foo;
-// SyntaxError: Missing initializer in const declaration
-```
-
-上面代码表示，对于`const`来说，只声明不赋值，就会报错。
-
-`const`的作用域与`let`命令相同：只在声明所在的块级作用域内有效。
-
-```javascript
-if (true) {
-  const MAX = 5;
-}
-
-MAX // Uncaught ReferenceError: MAX is not defined
-```
-
-`const`命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。
-
-```javascript
-if (true) {
-  console.log(MAX); // ReferenceError
-  const MAX = 5;
-}
-```
-
-上面代码在常量`MAX`声明之前就调用，结果报错。
-
-`const`声明的常量，也与`let`一样不可重复声明。
-
-```javascript
-var message = "Hello!";
-let age = 25;
-
-// 以下两行都会报错
-const message = "Goodbye!";
-const age = 30;
-```
-
-### 本质
-
-`const`实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，`const`只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。
-
-```javascript
-const foo = {};
-
-// 为 foo 添加一个属性，可以成功
-foo.prop = 123;
-foo.prop // 123
-
-// 将 foo 指向另一个对象，就会报错
-foo = {}; // TypeError: "foo" is read-only
-```
-
-上面代码中，常量`foo`储存的是一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把`foo`指向另一个地址，但对象本身是可变的，所以依然可以为其添加新属性。
-
-下面是另一个例子。
-
-```javascript
-const a = [];
-a.push('Hello'); // 可执行
-a.length = 0;    // 可执行
-a = ['Dave'];    // 报错
-```
-
-上面代码中，常量`a`是一个数组，这个数组本身是可写的，但是如果将另一个数组赋值给`a`，就会报错。
-
-如果真的想将对象冻结，应该使用`Object.freeze`方法。
-
-```javascript
-const foo = Object.freeze({});
-
-// 常规模式时，下面一行不起作用；
-// 严格模式时，该行会报错
-foo.prop = 123;
-```
-
-上面代码中，常量`foo`指向一个冻结的对象，所以添加新属性不起作用，严格模式时还会报错。
-
-除了将对象本身冻结，对象的属性也应该冻结。下面是一个将对象彻底冻结的函数。
-
-```javascript
-var constantize = (obj) => {
-  Object.freeze(obj);
-  Object.keys(obj).forEach( (key, i) => {
-    if ( typeof obj[key] === 'object' ) {
-      constantize( obj[key] );
-    }
-  });
-};
-```
 
 ### ES6 声明变量的六种方法
 
@@ -629,3 +103,834 @@ var getGlobal = function () {
 现在有一个[提案](https://github.com/tc39/proposal-global)，在语言标准的层面，引入`globalThis`作为顶层对象。也就是说，任何环境下，`globalThis`都是存在的，都可以从它拿到顶层对象，指向全局环境下的`this`。
 
 垫片库[`global-this`](https://github.com/ungap/global-this)模拟了这个提案，可以在所有环境拿到`globalThis`。
+
+扩展运算符取代`apply`方法的一个实际的例子，应用`Math.max`方法，简化求出一个数组最大元素的写法。
+
+```javascript
+// ES5 的写法
+Math.max.apply(null, [14, 3, 77])
+
+// ES6 的写法
+Math.max(...[14, 3, 77])
+
+// 等同于
+Math.max(14, 3, 77);
+```
+
+**（1）复制数组**
+扩展运算符提供了复制数组的简便写法。
+
+```javascript
+const a1 = [1, 2];
+// 写法一
+const a2 = [...a1];
+// 写法二
+const [...a2] = a1;
+```
+
+
+**（2）合并数组**
+```javascript
+const arr1 = ['a', 'b'];
+const arr2 = ['c'];
+const arr3 = ['d', 'e'];
+
+// ES5 的合并数组
+arr1.concat(arr2, arr3);
+// [ 'a', 'b', 'c', 'd', 'e' ]
+
+// ES6 的合并数组
+[...arr1, ...arr2, ...arr3]
+// [ 'a', 'b', 'c', 'd', 'e' ]
+```
+
+不过，这两种方法都是浅拷贝，使用的时候需要注意。
+
+**（3）与解构赋值结合**
+```javascript
+const [first, ...rest] = [1, 2, 3, 4, 5];
+first // 1
+rest  // [2, 3, 4, 5]
+```
+
+数组实例的`find`方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为`true`的成员，然后返回该成员。如果没有符合条件的成员，则返回`undefined`。
+
+```javascript
+[1, 4, -5, 10].find((n) => n < 0)
+// -5
+```
+数组实例的`findIndex`方法的用法与`find`方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回`-1`。
+
+```javascript
+[1, 5, 10, 15].findIndex(function(value, index, arr) {
+  return value > 9;
+}) // 2
+```
+
+## 数组实例的 entries()，keys() 和 values()
+
+ES6 提供三个新的方法——`entries()`，`keys()`和`values()`——用于遍历数组。它们都返回一个遍历器对象（详见《Iterator》一章），可以用`for...of`循环进行遍历，唯一的区别是`keys()`是对键名的遍历、`values()`是对键值的遍历，`entries()`是对键值对的遍历。
+
+```javascript
+for (let index of ['a', 'b'].keys()) {
+  console.log(index);
+}
+// 0
+// 1
+
+for (let elem of ['a', 'b'].values()) {
+  console.log(elem);
+}
+// 'a'
+// 'b'
+
+for (let [index, elem] of ['a', 'b'].entries()) {
+  console.log(index, elem);
+}
+// 0 "a"
+// 1 "b"
+```
+
+如果不使用`for...of`循环，可以手动调用遍历器对象的`next`方法，进行遍历。
+
+```javascript
+let letter = ['a', 'b', 'c'];
+let entries = letter.entries();
+console.log(entries.next().value); // [0, 'a']
+console.log(entries.next().value); // [1, 'b']
+console.log(entries.next().value); // [2, 'c']
+```
+
+`indexOf`方法有两个缺点，一是不够语义化，它的含义是找到参数值的第一个出现位置，所以要去比较是否不等于`-1`，表达起来不够直观。二是，它内部使用严格相等运算符（`===`）进行判断，这会导致对`NaN`的误判。
+
+```javascript
+[NaN].includes(NaN)
+// true
+```
+
+- `filter()` 返回满足条件的新数组（没有满足条件，返回 [])
+- `some()` 只要有满足条件的返回 true （否则 false)
+- `every()` 所以元素满足条件则返回 true （否则 false)
+
+- `forEach()`, `filter()`, `reduce()`, `every()` 和`some()`都会跳过空位。
+- `map()`会跳过空位，但会保留这个值
+- `join()`和`toString()`会将空位视为`undefined`，而`undefined`和`null`会被处理成空字符串。
+
+```javascript
+// forEach方法
+[,'a'].forEach((x,i) => console.log(i)); // 1
+
+// filter方法
+['a',,'b'].filter(x => true) // ['a','b']
+
+// every方法
+[,'a'].every(x => x==='a') // true
+
+// reduce方法
+[1,,2].reduce((x,y) => x+y) // 3
+
+// some方法
+[,'a'].some(x => x !== 'a') // false
+
+// map方法
+[,'a'].map(x => 1) // [,1]
+
+// join方法
+[,'a',undefined,null].join('#') // "#a##"
+
+// toString方法
+[,'a',undefined,null].toString() // ",a,,"
+```
+
+```
+/*
+async函数对 Generator 函数的改进
+（1）内置执行器。
+（2）更好的语义。
+（3）更广的适用性。
+（4）返回值是 Promise。
+*/
+
+async function f() {
+    return 'hello world';
+}
+  
+f().then(v => console.log(v))
+// "hello world"
+
+// 错误处理
+// 统一放在try...catch结构中
+async function main() {
+    try {
+      const val1 = await firstStep();
+      const val2 = await secondStep(val1);
+      const val3 = await thirdStep(val1, val2);
+  
+      console.log('Final: ', val3);
+    }
+    catch (err) {
+      console.error(err);
+    }
+  }
+
+// 建议一、把await命令放在try...catch代码块中。  
+// 建议二、多个await命令后面的异步操作，建议同时触发  await Promise.all
+
+// async 原理
+async function fn(args) {
+    // ...
+  }
+  
+  // 等同于
+  
+  function fn(args) {
+    return spawn(function* () {
+      // ...
+    });
+  }
+```
+
+```javascript
+
+// ES6 的类，完全可以看作构造函数的另一种写法。
+class Point {
+  // ...
+}
+
+typeof Point // "function"
+Point === Point.prototype.constructor // true
+
+
+
+// class 继承  extends
+
+class A {
+    static hello() {
+      console.log('hello world');
+    }
+  }
+  
+  class B extends A {
+  }
+  
+  B.hello()  // hello world
+
+```
+
+
+## 柯里化
+
+柯里化（currying）指的是将一个多参数的函数拆分成一系列函数，每个拆分后的函数都只接受一个参数（unary）。
+
+```javascript
+function add (a, b) {
+  return a + b;
+}
+
+add(1, 1) // 2
+```
+
+上面代码中，函数`add`接受两个参数`a`和`b`。
+
+柯里化就是将上面的函数拆分成两个函数，每个函数都只接受一个参数。
+
+```javascript
+function add (a) {
+  return function (b) {
+    return a + b;
+  }
+}
+// 或者采用箭头函数写法
+const add = x => y => x + y;
+
+const f = add(1);
+f(1) // 2
+```
+
+上面代码中，函数`add`只接受一个参数`a`，返回一个函数`f`。函数`f`也只接受一个参数`b`。
+
+
+注意，rest 参数之后不能再有其他参数（即只能是最后一个参数），否则会报错。
+
+```javascript
+// 报错
+function f(a, ...b, c) {
+  // ...
+}
+```
+
+ES6 允许使用“箭头”（`=>`）定义函数。
+
+```javascript
+var f = v => v;
+
+// 等同于
+var f = function (v) {
+  return v;
+};
+```
+
+如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分。
+
+
+箭头函数有几个使用注意点。
+
+（1）函数体内的`this`对象，就是定义时所在的对象，而不是使用时所在的对象。
+
+（2）不可以当作构造函数，也就是说，不可以使用`new`命令，否则会抛出一个错误。
+
+（3）不可以使用`arguments`对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。
+
+（4）不可以使用`yield`命令，因此箭头函数不能用作 Generator 函数。
+
+上面四点中，第一点尤其值得注意。`this`对象的指向是可变的，但是在箭头函数中，它是固定的。
+
+
+
+```javascript
+function foo() {
+  setTimeout(() => {
+    console.log('id:', this.id);
+  }, 100);
+}
+
+var id = 21;
+
+foo.call({ id: 42 });
+// id: 42
+```
+如果是普通函数，执行时`this`应该指向全局对象`window`，这时应该输出`21`。但是，箭头函数导致`this`总是指向函数定义生效时所在的对象（本例是`{id: 42}`），所以输出的是`42`。
+
+
+
+```javascript
+const cat = {
+  lives: 9,
+  jumps: () => {
+    this.lives--;
+  }
+}
+
+```
+
+上面代码中，`cat.jumps()`方法是一个箭头函数，这是错误的。调用`cat.jumps()`时，如果是普通函数，该方法内部的`this`指向`cat`；如果写成上面那样的箭头函数，使得`this`指向全局对象，因此不会得到预期结果。这是因为对象不构成单独的作用域，导致`jumps`箭头函数定义时的作用域就是全局作用域。
+
+```
+var x=11;
+var obj={
+  x:22,
+  say:function(){
+    console.log(this.x)
+  }
+}
+obj.say();
+//console.log输出的是22
+```
+
+```
+var x=11;
+var objFather={
+  x:33,
+  obj:{
+    x:22,
+    say:()=>{
+    console.log(this.x);
+    }
+  }
+}
+
+objFather.obj.say();  // 11
+```
+
+对象嵌套没有作用域增加
+
+```html
+<script src="path/to/myModule.js" defer></script>
+<script src="path/to/myModule.js" async></script>
+```
+
+上面代码中，`<script>`标签打开`defer`或`async`属性，脚本就会异步加载。渲染引擎遇到这一行命令，就会开始下载外部脚本，但不会等它下载和执行，而是直接执行后面的命令。
+
+`defer`与`async`的区别是：`defer`要等到整个页面在内存中正常渲染结束（DOM 结构完全生成，以及其他脚本执行完成），才会执行；`async`一旦下载完，渲染引擎就会中断渲染，执行这个脚本以后，再继续渲染。一句话，`defer`是“渲染完再执行”，`async`是“下载完就执行”。另外，如果有多个`defer`脚本，会按照它们在页面出现的顺序加载，而多个`async`脚本是不能保证加载顺序的。
+
+建议使用 `defer`
+
+### 内部变量
+
+ES6 模块应该是通用的，同一个模块不用修改，就可以用在浏览器环境和服务器环境。为了达到这个目标，Node 规定 ES6 模块之中不能使用 CommonJS 模块的特有的一些内部变量。
+
+首先，就是`this`关键字。ES6 模块之中，顶层的`this`指向`undefined`；CommonJS 模块的顶层`this`指向当前模块，这是两者的一个重大差异。
+
+其次，以下这些顶层变量在 ES6 模块之中都是不存在的。
+
+- `arguments`
+- `require`
+- `module`
+- `exports`
+- `__filename`
+- `__dirname`
+
+
+`import`命令具有提升效果，会提升到整个模块的头部，首先执行。
+
+```javascript
+foo();
+
+import { foo } from 'my_module';
+```
+
+
+`import()`加载模块成功以后，这个模块会作为一个对象，当作`then`方法的参数。因此，可以使用对象解构赋值的语法，获取输出接口。
+
+```javascript
+import('./myModule.js')
+.then(({export1, export2}) => {
+  // ...·
+});
+```
+
+```javascript
+Promise.all([
+  import('./module1.js'),
+  import('./module2.js'),
+  import('./module3.js'),
+])
+.then(([module1, module2, module3]) => {
+   ···
+});
+```
+
+ES6 在`Number`对象上，新提供了`Number.isFinite()`和`Number.isNaN()`两个方法。
+
+```javascript
+Number.isFinite(15); // true
+Number.isNaN('true' / 'true') // true
+```
+`Number.isFinite()`对于非数值一律返回`false`, `Number.isNaN()`只有对于`NaN`才返回`true`
+
+ES6 将全局方法`parseInt()`和`parseFloat()`，移植到`Number`对象上面，行为完全保持不变。
+```javascript
+// ES5的写法
+parseInt('12.34') // 12
+parseFloat('123.45#') // 123.45
+
+// ES6的写法
+Number.parseInt('12.34') // 12
+Number.parseFloat('123.45#') // 123.45
+```
+
+## Math 对象的扩展
+
+`Math.trunc`方法用于去除一个数的小数部分，返回整数部分。
+`Math.sign`方法用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。
+
+
+```javascript
+Math.trunc(4.9) // 4
+Math.sign(-5) // -1
+Math.sign(5) // +1
+Math.sign(0) // +0
+Math.sign(-0) // -0
+Math.sign(NaN) // NaN
+```
+与严格比较运算符（===）的行为基本一致。
+
+```javascript
+Object.is('foo', 'foo')
+// true
+Object.is({}, {})
+// false
+```
+
+不同之处只有两个：一是`+0`不等于`-0`，二是`NaN`等于自身。
+
+## Object.assign()
+注意，如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性。
+
+`Object.assign`方法实行的是浅拷贝
+
+
+### 属性的遍历
+
+ES6 一共有 5 种方法可以遍历对象的属性。
+
+**（1）for...in**
+
+`for...in`循环遍历对象自身的和继承的可枚举属性（不含 Symbol 属性）。
+
+**（2）Object.keys(obj)**
+
+`Object.keys`返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含 Symbol 属性）的键名。
+
+**（3）Object.getOwnPropertyNames(obj)**
+
+`Object.getOwnPropertyNames`返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名。
+
+**（4）Object.getOwnPropertySymbols(obj)**
+
+`Object.getOwnPropertySymbols`返回一个数组，包含对象自身的所有 Symbol 属性的键名。
+
+**（5）Reflect.ownKeys(obj)**
+
+`Reflect.ownKeys`返回一个数组，包含对象自身的所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举。
+
+以上的 5 种方法遍历对象的键名，都遵守同样的属性遍历的次序规则。
+
+- 首先遍历所有数值键，按照数值升序排列。
+- 其次遍历所有字符串键，按照加入时间升序排列。
+- 最后遍历所有 Symbol 键，按照加入时间升序排列。
+
+```javascript
+Reflect.ownKeys({ [Symbol()]:0, b:0, 10:0, 2:0, a:0 })
+// ['2', '10', 'b', 'a', Symbol()]
+```
+
+上面代码中，`Reflect.ownKeys`方法返回一个数组，包含了参数对象的所有属性。这个数组的属性次序是这样的，首先是数值属性`2`和`10`，其次是字符串属性`b`和`a`，最后是 Symbol 属性。
+
+### 解构赋值
+
+对象的解构赋值用于从一个对象取值，相当于将目标对象自身的所有可遍历的（enumerable）、但尚未被读取的属性，分配到指定的对象上面。所有的键和它们的值，都会拷贝到新对象上面。
+
+```javascript
+let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+x // 1
+y // 2
+z // { a: 3, b: 4 }
+```
+注意，解构赋值的拷贝是浅拷贝
+
+```javascript
+// Promise构造函数接受 1个 函数作为参数
+const promise = new Promise((resolve, reject) =>{
+
+    if( /* 异步操作成功 */ 'success') {
+        resolve(value);
+    }else{
+        reject(error);
+    }
+})
+// Promise实例生成以后，可以用then方法分别指定resolved状态和rejected状态的回调函数
+// then方法可以接受两个回调函数作为参数, 第2个是可选参数
+promise.then(function(value) {}, function(error) {});
+
+// Promise 新建后就会立即执行。
+
+// 用Promise对象实现的 Ajax 操作的例子
+
+const getJSON = function(url) {
+    const promise = new Promise(function(resolve, reject){
+      const handler = function() {
+        if (this.readyState !== 4) {
+          return;
+        }
+        if (this.status === 200) {
+          resolve(this.response);
+        } else {
+          reject(new Error(this.statusText));
+        }
+      };
+      const client = new XMLHttpRequest();
+      client.open("GET", url);
+      client.onreadystatechange = handler;
+      client.responseType = "json";
+      client.setRequestHeader("Accept", "application/json");
+      client.send();
+  
+    });
+  
+    return promise;
+  };
+  
+  getJSON("/posts.json").then(function(json) {
+    console.log('Contents: ' + json);
+  }, function(error) {
+    console.error('出错了', error);
+  });
+
+
+//   调用resolve或reject并不会终结 Promise 的参数函数的执行。
+new Promise((resolve, reject) => {
+    resolve(1);
+    console.log(2);
+}).then((r) => {
+    console.log(r);
+});
+// 2
+// 1
+
+// 链式调用  第一个回调函数完成以后，会将返回结果作为参数，传入第二个回调函数。
+getJSON("/posts.json").then(function(json) {
+    return json.post;
+  }).then(function(post) {
+    // ...
+  });
+
+
+// ****不建议在then方法里面定义 Reject 状态的回调函数（即then的第二个参数），建议使用catch方法。
+// Reject 和 catch方法都存在，谁在前面-先调用谁。
+
+// good
+promise
+  .then(function(data) { //cb
+    // success
+  })
+  .catch(function(err) {
+    // 处理前面所有Promise产生的错误
+  });
+
+const promise = new Promise(function(resolve, reject) {
+    resolve('ok');
+    throw new Error('test');  // 状态已经改变，不会执行
+});
+promise
+.then(function(value) { console.log(value) })
+.catch(function(error) { console.log(error) });  // throw 不执行，此处没有错误捕获
+  // ok
+
+
+  someAsyncThing().then(function() {
+    return someOtherAsyncThing();
+  }).catch(function(error) {
+    console.log('oh no', error);
+    // 下面一行会报错，因为y没有声明
+    y + 2;
+  }).catch(function(error) {
+    console.log('carry on', error);
+  });
+  // oh no [ReferenceError: x is not defined]
+  // carry on [ReferenceError: y is not defined]
+
+  promise
+  .then(result => {})
+  .catch(error => {})
+  .finally(() => {});
+
+
+//   finally 实现
+  Promise.prototype.finally = function (callback) {
+    let P = this.constructor;
+    return this.then(
+      value  => P.resolve(callback()).then(() => value),
+      reason => P.resolve(callback()).then(() => { throw reason })
+    );
+  };
+
+//   Promise.all()
+const p = Promise.all([p1, p2, p3]); // 都成功，则返回值组成一个数组返回。有一个失败，失败实例传给回调函数。
+
+// 如果p2没有自己的catch方法，就会调用Promise.all()的catch方法
+const p1 = new Promise((resolve, reject) => {
+    resolve('hello');
+  })
+  .then(result => result);
+  
+  const p2 = new Promise((resolve, reject) => {
+    throw new Error('报错了');
+  })
+  .then(result => result);
+  
+  Promise.all([p1, p2])
+  .then(result => console.log(result))
+  .catch(e => console.log(e));
+  // Error: 报错了
+
+//   Promise.race()  
+const p = Promise.race([p1, p2, p3]);  // 一旦迭代器中的某个promise解决或拒绝，返回的 promise就会解决或拒绝。
+
+// 如果 5 秒之内fetch方法无法返回结果，变量p的状态就会变为rejected，从而触发catch方法指定的回调函数。
+const p = Promise.race([
+    fetch('/resource-that-may-take-a-while'),
+    new Promise(function (resolve, reject) {
+      setTimeout(() => reject(new Error('request timeout')), 5000)
+    })
+  ]);
+  
+  p
+  .then(console.log)
+  .catch(console.error);
+
+
+var promise1 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 1000, 'one');
+});
+
+var promise2 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 500, 'two');
+});
+
+Promise.race([promise1, promise2]).then(function(value) {
+  console.log(value);
+// Both resolve, but promise2 is faster
+}).catch(function(error) {
+console.log(error);
+});
+//'two'
+
+
+// setTimeout 从第三个参数开始，为回调函数的执行参数
+setTimeout(function (a,b){
+    console.log(a,b);
+},10,200,400);
+//200 400
+```
+
+
+```javascript
+/*
+console.log(typeof NaN);  //number
+console.log(typeof NAN);  //undefined
+*/
+
+
+/*
+//forEach 和 map
+let arr = [1,2,3,3,3];
+let foreachArr = arr.forEach((x,index) => arr[index]=2*x);  // undefined   [2, 4, 6, 6, 6] arr的值被修改
+let mapArr = arr.map((x,index) => arr[index]=2*x);  // [2, 4, 6, 6, 6]   [2, 4, 6, 6, 6]  arr的值被修改
+console.log(arr, mapArr);
+// forEach 无返回值 ， map有返回值（新数组占内存）
+
+*/
+
+
+// set和map的用法  1、去重。2、属性和方法
+// set 不重复值集合
+/*
+const s = new Set();
+[1,1,2,2,3,3].forEach(x=>s.add(x));   // add 是 set的方法
+for(let i of s){
+    console.log(i);
+}
+console.log(s, 's');
+
+let arr = [1,2,3,3,3];
+let str = 'abbbbc';
+// 去除 数组、字符串 的重复成员（不会发生类型转换
+let newArr = [...new Set(arr)];
+let newStr = [...new Set(str)].join('');
+
+console.log(newArr, newStr);
+
+// 2、属性和方法  size  操作方法（4个，用于操作数据）和遍历方法（4个，
+
+s.add(1) //添加某个值，返回 Set 结构本身
+s.delete(1) //删除某个值，返回一个布尔值，表示删除是否成功。
+s.has(1) //返回一个布尔值，表示该值是否为Set的成员。
+s.clear() //清除所有成员，没有返回值。
+
+s.add(1).add(2).add(2).add(3);
+s.size // 2
+s.has(1) // true
+s.has(4) // false
+
+s.delete(2);
+s.has(2) // false
+
+console.log(s, '遍历');
+for (let item of s.keys()) {
+    console.log(item);   // 1 3
+}
+for (let item of s.values()) {
+    console.log(item);   // 1,3
+}
+for (let item of s.entries()) {
+    console.log(item);   // [1, 1]   [3, 3]
+}
+
+s.forEach((index, item) => console.log(item));
+
+数组的map和filter方法间接使用 Set
+let set = new Set([1, 2, 3]);
+set = new Set([...set].map(x => x * 2));
+// 返回Set结构：{2, 4, 6}
+
+let set = new Set([1, 2, 3, 4, 5]);
+set = new Set([...set].filter(x => (x % 2) == 0));
+// 返回Set结构：{2, 4}
+
+// 并集（Union）、交集（Intersect）和差集（Difference）
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
+
+// 并集
+let union = new Set([...a, ...b]);
+// Set {1, 2, 3, 4}
+
+// 交集
+let intersect = new Set([...a].filter(x => b.has(x)));
+// set {2, 3}
+
+// 差集
+let difference = new Set([...a].filter(x => !b.has(x)));
+// Set {1}
+
+new Set([1,2,{},{},2,3,NaN,NaN])   //Set(5) {1, 2, {}, {}, 3, NaN}   空对象是不相等的，NaN是相等的
+
+*/
+
+// map 键值对集合  是和内存地址绑定的。
+const map = new Map();
+map.set('aa','aa');
+map.get('aa');
+console.log(map);
+
+const m1 = new Map([['name','caiyi' ],['title','author']]);
+// 实际上  上面等价下面
+// 除了数组，只要有键值对的都可以作为map的参数
+const items = [
+    ['name', '张三'],
+    ['title', 'Author']
+  ];
+  
+const m = new Map();
+items.forEach(([key, value]) => m.set(key,value));
+
+console.log(m.size);
+console.log(m.has('name'));
+console.log(m.get('name'));
+
+
+m.set(1, 'aaa').set(1, 'bbb');
+m.get(1) // "bbb"    覆盖前一次的值
+
+new Map().get('asfddfsasadf')
+// undefined    未知的键 =》 undefined
+
+const map2 = new Map();
+
+map2.set(['a'], 555);
+console.log(map2.get(['a'])); // undefined  内存地址是不一样的
+
+
+// map属性和遍历方法
+// size
+// set
+// get
+// has
+// delete  成功 true  失败 false
+// clear  没有返回值
+
+// 遍历和set差不多  类似数组和对象
+// keys  
+// values 
+// entries
+// forEach
+
+
+// 同样 有weakMap 典型场合就是 DOM 节点作为键名。
+let myElement = document.getElementById('logo');
+let myWeakmap = new WeakMap();
+
+myWeakmap.set(myElement, {timesClicked: 0});
+
+myElement.addEventListener('click', function() {
+  let logoData = myWeakmap.get(myElement);
+  logoData.timesClicked++;
+}, false);
+
+```
+
+
+
+
+
